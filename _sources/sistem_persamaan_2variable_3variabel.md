@@ -14,10 +14,10 @@ Langkah 1: Membuat Matriks Augmented
 
 Tulis sistem persamaan dalam bentuk matriks augmented:
 $$
-\begin{multline*}
+\begin{align*}
 2 & 3 & 5 \\
 4 & -1 & 1
-\end{multline*}
+\end{align*}
 $$
 
 Langkah 2: Operasi Baris Elementer
