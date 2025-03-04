@@ -60,8 +60,6 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sistem_persamaan_2variable_3variabel';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -171,7 +169,7 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Persamaan Sistem Linier</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus</a></li>
 </ul>
 
     </div>
@@ -354,7 +352,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus</h1>
+    <h1>penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -364,14 +362,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linear-dengan-2-persamaan-dan-2-variabel">Sistem Persamaan Linear dengan 2 Persamaan dan 2 Variabel</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geogebra-persamaan-linear-dengan-2-persamaan-dan-2-variabel">Geogebra Persamaan Linear dengan 2 Persamaan dan 2 Variabel</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linear-dengan-3-persamaan-dan-3-variabel">Sistem Persamaan Linear dengan 3 Persamaan dan 3 Variabel</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geogebra-persamaan-linear-dengan-3-persamaan-dan-3-variabel">Geogebra Persamaan Linear dengan 3 Persamaan dan 3 Variabel</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linear-dengan-2-persamaan-dan-2-variabel">Sistem Persamaan Linear dengan 2 Persamaan dan 2 Variabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linear-dengan-3-persamaan-dan-3-variabel">Sistem Persamaan Linear dengan 3 Persamaan dan 3 Variabel</a></li>
 </ul>
             </nav>
         </div>
@@ -384,190 +376,176 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="penyelesaian-sistem-linear-dengan-menggunakan-sistem-persamaan-linear-gaus">
-<h1>penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus<a class="headerlink" href="#penyelesaian-sistem-linear-dengan-menggunakan-sistem-persamaan-linear-gaus" title="Link to this heading">#</a></h1>
+<h1>penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus<a class="headerlink" href="#penyelesaian-sistem-linear-dengan-menggunakan-sistem-persamaan-linear-gaus" title="Link to this heading">#</a></h1>
 <section id="sistem-persamaan-linear-dengan-2-persamaan-dan-2-variabel">
 <h2>Sistem Persamaan Linear dengan 2 Persamaan dan 2 Variabel<a class="headerlink" href="#sistem-persamaan-linear-dengan-2-persamaan-dan-2-variabel" title="Link to this heading">#</a></h2>
-<p>saya memiliki sistem persamaan berikut:
-<span class="math notranslate nohighlight">\(2 x+3 y=5\)</span>
-<span class="math notranslate nohighlight">\(4 x-y=1\)</span></p>
+<p>saya memiliki sistem persamaan berikut:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+2x+3y=5
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+4x-y=1
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
 <p>Langkah 1: Membuat Matriks Augmented</p>
-<p>Tulis sistem persamaan dalam bentuk matriks augmented:
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{cc|c}
-2 &amp; 3 &amp; 5 \\
-4 &amp; -1 &amp; 1
-\end{array}\right]
-\)</span>$</p>
+<p>Tulis sistem persamaan dalam bentuk matriks augmented:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>cc|c<span class="nb">}</span>
+2 <span class="nb">&amp;</span> 3 <span class="nb">&amp;</span> 5 <span class="k">\\</span>
+4 <span class="nb">&amp;</span> -1 <span class="nb">&amp;</span> 1
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
 <p>Langkah 2: Operasi Baris Elementer</p>
 <p>Langkah 2.1: Membuat elemen pertama pada baris pertama menjadi 1.
-Bagi baris pertama dengan 2:
-$<span class="math notranslate nohighlight">\(
-\left\begin{align*}
-1 &amp; 1.5 &amp; 2.5 \\
-4 &amp; -1 &amp; 1
-\end{align*}\right]
-\)</span>$</p>
+Bagi baris pertama dengan 2:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>cc|c<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 1.5 <span class="nb">&amp;</span> 2.5 <span class="k">\\</span>
+4 <span class="nb">&amp;</span> -1 <span class="nb">&amp;</span> 1
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
 <p>Langkah 2.2: Eliminasi elemen di bawah pivot pertama.
-Gunakan operasi baris: <span class="math notranslate nohighlight">\(R_2=R_2-4 R_1\)</span> :
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{rr|r}
-1 &amp; 1.5 &amp; 2.5 \\
-0 &amp; -7 &amp; -9
-\end{array}\right]
-\)</span>$</p>
+Gunakan operasi baris: ( R_2=R_2-4 R_1 )</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>rr|r<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 1.5 <span class="nb">&amp;</span> 2.5 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> -7 <span class="nb">&amp;</span> -9
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
 <p>Langkah 2.3: Membuat elemen kedua pada baris kedua menjadi 1.
-Bagi baris kedua dengan -7 :
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{cc:c}
-1 &amp; 1.5 &amp; 2.5 \\
-0 &amp; 1 &amp; \frac{9}{7}
-\end{array}\right]
-\)</span>$</p>
+Bagi baris kedua dengan -7:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>cc|c<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 1.5 <span class="nb">&amp;</span> 2.5 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> <span class="k">\frac</span><span class="nb">{</span>9<span class="nb">}{</span>7<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
 <p>Langkah 2.4: Eliminasi elemen di atas pivot kedua.
-Gunakan operasi baris: <span class="math notranslate nohighlight">\(R_1=R_1-1.5 R_2\)</span> :
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{ll|l}
-1 &amp; 0 &amp; \frac{1}{7} \\
-0 &amp; 1 &amp; \\
-\frac{6}{7}
-\end{array}\right]
-\)</span>$</p>
-<p>Langkah 3: Solusi
+Gunakan operasi baris: ( R_1=R_1-1.5 R_2 )</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>ll|l<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> <span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span>7<span class="nb">}</span> <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> <span class="k">\frac</span><span class="nb">{</span>6<span class="nb">}{</span>7<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Langkah 3: Solusi
 Dari matriks terakhir, kita dapat membaca solusinya:
-$<span class="math notranslate nohighlight">\(
+```latex
+\begin{equation}
 x=\frac{1}{7}, \quad y=\frac{9}{7}
-\)</span>$</p>
-<section id="geogebra-persamaan-linear-dengan-2-persamaan-dan-2-variabel">
-<h3>Geogebra Persamaan Linear dengan 2 Persamaan dan 2 Variabel<a class="headerlink" href="#geogebra-persamaan-linear-dengan-2-persamaan-dan-2-variabel" title="Link to this heading">#</a></h3>
-<iframe src="https://www.geogebra.org/calculator/mb3yhtr8?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-</section>
+\end{equation}
+</pre></div>
+</div>
 </section>
 <section id="sistem-persamaan-linear-dengan-3-persamaan-dan-3-variabel">
 <h2>Sistem Persamaan Linear dengan 3 Persamaan dan 3 Variabel<a class="headerlink" href="#sistem-persamaan-linear-dengan-3-persamaan-dan-3-variabel" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\left\{\begin{array}{lc}
-x+2 y+z=9 &amp; (\text { Persamaan 1) } \\
-2 x+y-z=3 &amp; \text { (Persamaan 2) } \\
-3 x-y+2 z=8 &amp; (\text { Persamaan 3) }
-\end{array}\right.
-\end{split}\]</div>
-<p>Langkah 1: Membuat Matriks Augmented
-Tulis sistem persamaan dalam bentuk matriks augmented:
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{ccc|c}
-1 &amp; 2 &amp; 1 &amp; 9 \\
-2 &amp; 1 &amp; -1 &amp; 3 \\
-3 &amp; -1 &amp; 2 &amp; 8
-\end{array}\right]
-\)</span>$</p>
-<p>Langkah 2: Eliminasi Gauss
-Tujuan: Mengubah matriks menjadi bentuk eselon baris (row echelon form).</p>
-<p>Langkah 2.1: Membuat elemen pertama pada baris pertama menjadi 1 (sudah 1, lanjut).
-Langkah 2.2: Eliminasi elemen di bawah pivot pertama.
-Gunakan operasi baris:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_2=R_2-2 R_1\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(R_3=R_3-3 R_1\)</span></p></li>
-</ul>
-<p>Hasilnya:
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{ccc|c}
-1 &amp; 2 &amp; 1 &amp; 9 \\
-0 &amp; -3 &amp; -3 &amp; -15 \\
-0 &amp; -7 &amp; -1 &amp; -19
-\end{array}\right]
-\)</span>$</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>cases<span class="nb">}</span>
+x+2y+z=9 <span class="k">\\</span>
+2x+y-z=3 <span class="k">\\</span>
+3x-y+2z=8
+<span class="k">\end</span><span class="nb">{</span>cases<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Langkah 1: Membuat Matriks Augmented</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>ccc|c<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 2 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 9 <span class="k">\\</span>
+2 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> -1 <span class="nb">&amp;</span> 3 <span class="k">\\</span>
+3 <span class="nb">&amp;</span> -1 <span class="nb">&amp;</span> 2 <span class="nb">&amp;</span> 8
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Langkah 2: Eliminasi Gauss</p>
+<p>Gunakan operasi baris:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+R<span class="nb">_</span>2=R<span class="nb">_</span>2-2 R<span class="nb">_</span>1, <span class="k">\quad</span> R<span class="nb">_</span>3=R<span class="nb">_</span>3-3 R<span class="nb">_</span>1
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Hasilnya:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>ccc|c<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 2 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 9 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> -3 <span class="nb">&amp;</span> -3 <span class="nb">&amp;</span> -15 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> -7 <span class="nb">&amp;</span> -1 <span class="nb">&amp;</span> -19
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
 <p>Langkah 2.3: Membuat elemen kedua pada baris kedua menjadi 1.
-Bagi baris kedua dengan -3 :
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{ccc|c}
-1 &amp; 2 &amp; 1 &amp; 9 \\
-0 &amp; 1 &amp; 1 &amp; 5 \\
-0 &amp; -7 &amp; -1 &amp; -19
-\end{array}\right]
-\)</span>$</p>
-<p>Langkah 2.4: Eliminasi elemen di atas dan di bawah pivot kedua.
-Gunakan operasi baris:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_1=R_1-2 R_2\)</span></p></li>
-</ul>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_3=R_3+7 R_2\)</span></p></li>
-</ul>
-<p>Hasilnya:
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{ccc:c}
-1 &amp; 0 &amp; -1 &amp; -1 \\
-0 &amp; 1 &amp; 1 &amp; 5 \\
-0 &amp; 0 &amp; 6 &amp; 16
-\end{array}\right]
-\)</span><span class="math notranslate nohighlight">\(
-Langkah 2.5: Membuat elemen ketiga pada baris ketiga menjadi 1.
-Bagi baris ketiga dengan 6:
-\)</span><span class="math notranslate nohighlight">\(
-\left[\begin{array}{ccc:c}
-1 &amp; 0 &amp; -1 &amp; -1 \\
-0 &amp; 1 &amp; 1 &amp; 5 \\
-0 &amp; 0 &amp; 1 &amp; \frac{16}{6}=\frac{8}{3}
-\end{array}\right]
-\)</span>$</p>
-<p>Langkah 2.6: Eliminasi elemen di atas pivot ketiga.
-Gunakan operasi baris:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_1=R_1+R_3\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(R_2=R_2-R_3\)</span></p></li>
-</ul>
-<p>Hasilnya:
-$<span class="math notranslate nohighlight">\(
-\left[\begin{array}{lll:l}
-1 &amp; 0 &amp; 0 &amp; \frac{5}{3} \\
-0 &amp; 1 &amp; 0 &amp; \frac{7}{3} \\
-0 &amp; 0 &amp; 1 &amp; \frac{8}{3}
-\end{array}\right]
-\)</span>$</p>
-<p>Langkah 3: Solusi
-Dari matriks terakhir, kita dapat membaca solusinya:
-$<span class="math notranslate nohighlight">\(
-x=\frac{5}{3}, \quad y=\frac{7}{3}, \quad z=\frac{8}{3}
-\)</span><span class="math notranslate nohighlight">\(
-Verifikasi Solusi
-Substitusikan nilai \)</span>x, y, z$ ke dalam persamaan asli untuk memverifikasi kebenaran solusi:</p>
-<ol class="arabic simple">
-<li><p>Persamaan 1:
-$<span class="math notranslate nohighlight">\(
-x+2 y+z=9
-\)</span>$</p></li>
-</ol>
-<p>Substitusi:
-$<span class="math notranslate nohighlight">\(
-\frac{5}{3}+2 \cdot \frac{7}{3}+\frac{8}{3}=\frac{5}{3}+\frac{14}{3}+\frac{8}{3}=\frac{27}{3}=9
-\)</span><span class="math notranslate nohighlight">\(
-2. Persamaan 2:
-\)</span><span class="math notranslate nohighlight">\(
-2 x+y-z=3
-\)</span>$</p>
-<p>Substitusi:
-$<span class="math notranslate nohighlight">\(
-2 \cdot \frac{5}{3}+\frac{7}{3}-\frac{8}{3}=\frac{10}{3}+\frac{7}{3}-\frac{8}{3}=\frac{9}{3}=3
-\)</span><span class="math notranslate nohighlight">\(
-3. Persamaan 3:
-\)</span><span class="math notranslate nohighlight">\(
-3 x-y+2 z=8
-\)</span>$</p>
-<p>Substitusi:
-$<span class="math notranslate nohighlight">\(
-3 \cdot \frac{5}{3}-\frac{7}{3}+2 \cdot \frac{8}{3}=\frac{15}{3}-\frac{7}{3}+\frac{16}{3}=\frac{24}{3}=8
-\)</span>$</p>
-<p>Kesimpulan
-Solusi sistem persamaan linear tersebut adalah:
-$<span class="math notranslate nohighlight">\(
-x=\frac{5}{3}, \quad y=\frac{7}{3}, \quad z=\frac{8}{3}
-\)</span>$</p>
-<section id="geogebra-persamaan-linear-dengan-3-persamaan-dan-3-variabel">
-<h3>Geogebra Persamaan Linear dengan 3 Persamaan dan 3 Variabel<a class="headerlink" href="#geogebra-persamaan-linear-dengan-3-persamaan-dan-3-variabel" title="Link to this heading">#</a></h3>
-<iframe src="https://www.geogebra.org/calculator/deg5zxxg?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-</section>
+Bagi baris kedua dengan -3:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>ccc|c<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 2 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 9 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 5 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> -7 <span class="nb">&amp;</span> -1 <span class="nb">&amp;</span> -19
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Gunakan operasi baris:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+R<span class="nb">_</span>1=R<span class="nb">_</span>1-2 R<span class="nb">_</span>2, <span class="k">\quad</span> R<span class="nb">_</span>3=R<span class="nb">_</span>3+7 R<span class="nb">_</span>2
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Hasilnya:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>ccc|c<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> -1 <span class="nb">&amp;</span> -1 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 5 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> 6 <span class="nb">&amp;</span> 16
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Bagi baris ketiga dengan 6:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>ccc|c<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> -1 <span class="nb">&amp;</span> -1 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 5 <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> <span class="k">\frac</span><span class="nb">{</span>8<span class="nb">}{</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Gunakan operasi baris:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+R<span class="nb">_</span>1=R<span class="nb">_</span>1+R<span class="nb">_</span>3, <span class="k">\quad</span> R<span class="nb">_</span>2=R<span class="nb">_</span>2-R<span class="nb">_</span>3
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Hasilnya:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\left</span>[<span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>ccc|c<span class="nb">}</span>
+1 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> <span class="k">\frac</span><span class="nb">{</span>5<span class="nb">}{</span>3<span class="nb">}</span> <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> <span class="k">\frac</span><span class="nb">{</span>7<span class="nb">}{</span>3<span class="nb">}</span> <span class="k">\\</span>
+0 <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> <span class="k">\frac</span><span class="nb">{</span>8<span class="nb">}{</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span><span class="k">\right</span>]
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Langkah 3: Solusi</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+x=<span class="k">\frac</span><span class="nb">{</span>5<span class="nb">}{</span>3<span class="nb">}</span>, <span class="k">\quad</span> y=<span class="k">\frac</span><span class="nb">{</span>7<span class="nb">}{</span>3<span class="nb">}</span>, <span class="k">\quad</span> z=<span class="k">\frac</span><span class="nb">{</span>8<span class="nb">}{</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -627,14 +605,8 @@ x=\frac{5}{3}, \quad y=\frac{7}{3}, \quad z=\frac{8}{3}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linear-dengan-2-persamaan-dan-2-variabel">Sistem Persamaan Linear dengan 2 Persamaan dan 2 Variabel</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geogebra-persamaan-linear-dengan-2-persamaan-dan-2-variabel">Geogebra Persamaan Linear dengan 2 Persamaan dan 2 Variabel</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linear-dengan-3-persamaan-dan-3-variabel">Sistem Persamaan Linear dengan 3 Persamaan dan 3 Variabel</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geogebra-persamaan-linear-dengan-3-persamaan-dan-3-variabel">Geogebra Persamaan Linear dengan 3 Persamaan dan 3 Variabel</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linear-dengan-2-persamaan-dan-2-variabel">Sistem Persamaan Linear dengan 2 Persamaan dan 2 Variabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linear-dengan-3-persamaan-dan-3-variabel">Sistem Persamaan Linear dengan 3 Persamaan dan 3 Variabel</a></li>
 </ul>
   </nav></div>
 
