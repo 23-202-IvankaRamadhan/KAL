@@ -14,10 +14,10 @@ Langkah 1: Membuat Matriks Augmented
 
 Tulis sistem persamaan dalam bentuk matriks augmented:
 $$
-\begin{align*}
+\left[\begin{array}{cc|c}
 2 & 3 & 5 \\
 4 & -1 & 1
-\end{align*}
+\end{array}\right]
 $$
 
 Langkah 2: Operasi Baris Elementer
@@ -25,10 +25,10 @@ Langkah 2: Operasi Baris Elementer
 Langkah 2.1: Membuat elemen pertama pada baris pertama menjadi 1.
 Bagi baris pertama dengan 2:
 $$
-\left[\begin{array}{cc|c}
+\left\begin{align*}
 1 & 1.5 & 2.5 \\
 4 & -1 & 1
-\end{array}\right]
+\end{align*}\right]
 $$
 
 Langkah 2.2: Eliminasi elemen di bawah pivot pertama.
