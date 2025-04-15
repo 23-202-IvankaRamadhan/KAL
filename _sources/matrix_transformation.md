@@ -114,7 +114,7 @@ T\left(t_x, t_y\right) \cdot T\left(t_{x 1}, t_y\right)=T\left(t_{x 1}+t_{x 2}, 
 $$
 
 ### B2. Scaling
-Bila operasi penskalaan dilakukan sebanyak dua kali, maka akan menghasilkan matriks skala komposit sebagai berikut:
+Bila operasi penskalaan dilakukan sebanyak dua kali, maka akan menghasilkan matriks skala komposit sebagai berikut.:
 
 $$
 \left[\begin{array}{ccc}

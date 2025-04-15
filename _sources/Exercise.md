@@ -3,7 +3,7 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 
-\title{Latihan Matriks Transformasi}
+\title{Latihan Matriks Transformasi.}
 \date{}
 
 \begin{document}
