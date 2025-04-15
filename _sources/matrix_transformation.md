@@ -281,8 +281,8 @@ Terhadap sumbu y = -x
 
 
 ---
-title: Exercise
-title: Ini Adalah Tugas
+title: Tugas Exercise
+
 ---
 
 # Exercise Matrik Transformation
