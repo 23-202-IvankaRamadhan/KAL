@@ -1,92 +1,154 @@
-\documentclass[12pt]{article}
-\usepackage{amsmath}
-\usepackage{geometry}
-\geometry{margin=1in}
+---
+title: Exercise
 
-\title{Latihan Matriks Transformasi.}
-\date{}
+---
 
-\begin{document}
+# Exercise Matrik Transformation
 
-\maketitle
+## Latihan Kelompok
 
-\section*{Soal Latihan}
+Diberikan matriks A, gambar hasil transformasi vektor-vektor $\hat{x}$ dan $\hat{y}$ pada sumbu Cartesian yang sama.
 
-Diberikan:
-\[
-\hat{x} = \begin{bmatrix}1 \\ 1\end{bmatrix}, \quad
-\hat{y} = \begin{bmatrix}-1 \\ 2\end{bmatrix}
-\]
+### Matriks A1:
 
-Gambarkan vektor- vektor $\hat{x}$, $\hat{y}$, $A\hat{x}$ dan $A\hat{y}$ pada bidang yang sama!
+$$
+A=\left[\begin{array}{ll}
+1 & 1 \\ 
+2 & 3
+\end{array}\right]
+$$
 
-\subsection*{Soal 1}
+a. $A \hat{x}$
 
-\[
-A = \begin{bmatrix}1 & 1 \\ 2 & 3\end{bmatrix}
-\]
+$$ 
+A \hat{x}=\left[\begin{array}{ll}
+1 & 1 \\ 
+2 & 3
+\end{array}\right]\left[\begin{array}{l}
+1 \\
+1
+\end{array}\right]=\left[\begin{array}{l}
+2 \\
+5
+\end{array}\right]
+$$
 
-\[
-A\hat{x} = \begin{bmatrix}1 & 1 \\ 2 & 3\end{bmatrix}
-\begin{bmatrix}1 \\ 1\end{bmatrix} = 
-\begin{bmatrix}2 \\ 5\end{bmatrix}
-\]
+b. $A \hat{y}$
 
-\[
-A\hat{y} = \begin{bmatrix}1 & 1 \\ 2 & 3\end{bmatrix}
-\begin{bmatrix}-1 \\ 2\end{bmatrix} = 
-\begin{bmatrix}1 \\ 4\end{bmatrix}
-\]
+$$
+A \hat{y}=\left[\begin{array}{ll}
+1 & 1 \\ 
+2 & 3
+\end{array}\right]\left[\begin{array}{c}
+-1 \\
+2
+\end{array}\right]=\left[\begin{array}{l}
+1 \\
+4
+\end{array}\right]
+$$
 
-\subsection*{Soal 2}
+### Matriks A2:
 
-\[
-A = \begin{bmatrix}2 & 0 \\ -1 & 3\end{bmatrix}
-\]
+$$
+A=\left[\begin{array}{cc}
+2 & 0 \\ 
+-1 & 3
+\end{array}\right]
+$$
 
-\[
-A\hat{x} = \begin{bmatrix}2 & 0 \\ -1 & 3\end{bmatrix}
-\begin{bmatrix}1 \\ 1\end{bmatrix} = 
-\begin{bmatrix}2 \\ 2\end{bmatrix}
-\]
+a. $A \hat{x}$
 
-\[
-A\hat{y} = \begin{bmatrix}2 & 0 \\ -1 & 3\end{bmatrix}
-\begin{bmatrix}-1 \\ 2\end{bmatrix} = 
-\begin{bmatrix}-2 \\ 7\end{bmatrix}
-\]
+$$
+A \hat{x}=\left[\begin{array}{cc}
+2 & 0 \\ 
+-1 & 3
+\end{array}\right]\left[\begin{array}{l}
+1 \\
+1
+\end{array}\right]=\left[\begin{array}{l}
+2 \\
+2
+\end{array}\right]
+$$
 
-\subsection*{Catatan}
+b. $A \hat{y}$
 
-\begin{itemize}
-  \item Matriks $2 \times 2$ dapat mengubah basis standar vektor $\hat{x} = \begin{bmatrix}1 \\ 0\end{bmatrix}$ dan $\hat{y} = \begin{bmatrix}0 \\ 1\end{bmatrix}$
-  \item Vektor hasil transformasi $A\hat{x}$ dan $A\hat{y}$ menjadi kolom pertama dan kolom kedua dari matriks transformasi $A$
-\end{itemize}
+$$
+A \hat{y}=\left[\begin{array}{cc}
+2 & 0 \\ 
+-1 & 3
+\end{array}\right]\left[\begin{array}{c}
+-1 \\
+2
+\end{array}\right]=\left[\begin{array}{c}
+-2 \\
+7
+\end{array}\right]
+$$
 
-\section*{Soal 5}
+## Kelompok Latihan
 
-Diketahui:
-\[
-A\hat{x} = \begin{bmatrix}1 \\ 2\end{bmatrix}, \quad
-A\hat{y} = \begin{bmatrix}2 \\ 3\end{bmatrix}
-\]
+Sketsa persegi satuan yang telah ditransformasikan diberikan. Temukan matriks A yang melakukan transformasi ini.
 
-Maka matriks $A$ adalah:
-\[
-A = \begin{bmatrix}1 & 2 \\ 2 & 3\end{bmatrix}
-\]
+![image](_build/html/_images/1.png)
 
-\section*{Soal 6}
+### Soal 5
 
-Diketahui:
-\[
-A\hat{x} = \begin{bmatrix}1 \\ 1\end{bmatrix}, \quad
-A\hat{y} = \begin{bmatrix}-1 \\ 1\end{bmatrix}
-\]
+Langkah 1: Identifikasi transformasi dari gambar
+- Vektor $\hat{x}$ ditransformasikan menjadi:
 
-Maka matriks $A$ adalah:
-\[
-A = \begin{bmatrix}1 & -1 \\ 1 & 1\end{bmatrix}
-\]
+$$
+A \hat{x}=\left[\begin{array}{l}
+1 \\
+2
+\end{array}\right]
+$$
 
-\end{document}
+- Vektor $\hat{y}$ ditransformasikan menjadi:
+
+$$
+A \hat{y}=\left[\begin{array}{l}
+2 \\
+3
+\end{array}\right]
+$$
+
+Langkah 2: Susun Matriks Transformasi
+
+$$
+A=\left[\begin{array}{ll}
+1 & 2 \\
+2 & 3
+\end{array}\right]
+$$
+
+### Soal 6
+
+Langkah 1: Identifikasi transformasi dari gambar
+- Vektor $\hat{x}$ ditransformasikan menjadi:
+
+$$
+A \hat{x}=\left[\begin{array}{l}
+1 \\
+1
+\end{array}\right]
+$$
+
+- Vektor $\hat{y}$ ditransformasikan menjadi:
+
+$$
+A \hat{y}=\left[\begin{array}{c}
+-1 \\
+1
+\end{array}\right]
+$$
+
+Langkah 2: Susun Matriks Transformasi
+
+$$
+A=\left[\begin{array}{cc}
+1 & -1 \\
+1 & 1
+\end{array}\right]
+$$

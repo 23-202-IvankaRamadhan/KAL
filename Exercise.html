@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Komputasi Aljabar Linier</title>
+    <title>Exercise Matrik Transformation &#8212; Komputasi Aljabar Linier</title>
   
   
   
@@ -169,11 +169,12 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Persamaan Sistem Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sistem_persamaan_2variable_3variabel.html">penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="invers%20matriks.html">INVERS MATRIK</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrix_transformation.html">Matrix Transformations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise Matrik Transformation</a></li>
 </ul>
 
     </div>
@@ -356,7 +357,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Exercise Matrik Transformation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -365,9 +366,18 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-kelompok">Latihan Kelompok</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a1">Matriks A1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a2">Matriks A2:</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelompok-latihan">Kelompok Latihan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5">Soal 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6">Soal 6</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -378,75 +388,158 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>\documentclass[12pt]{article}
-\usepackage{amsmath}
-\usepackage{geometry}
-\geometry{margin=1in}</p>
-<p>\title{Latihan Matriks Transformasi.}
-\date{}</p>
-<p>\begin{document}</p>
-<p>\maketitle</p>
-<p>\section*{Soal Latihan}</p>
-<p>Diberikan:
-[
-\hat{x} = \begin{bmatrix}1 \ 1\end{bmatrix}, \quad
-\hat{y} = \begin{bmatrix}-1 \ 2\end{bmatrix}
-]</p>
-<p>Gambarkan vektor- vektor <span class="math notranslate nohighlight">\(\hat{x}\)</span>, <span class="math notranslate nohighlight">\(\hat{y}\)</span>, <span class="math notranslate nohighlight">\(A\hat{x}\)</span> dan <span class="math notranslate nohighlight">\(A\hat{y}\)</span> pada bidang yang sama!</p>
-<p>\subsection*{Soal 1}</p>
-<p>[
-A = \begin{bmatrix}1 &amp; 1 \ 2 &amp; 3\end{bmatrix}
-]</p>
-<p>[
-A\hat{x} = \begin{bmatrix}1 &amp; 1 \ 2 &amp; 3\end{bmatrix}
-\begin{bmatrix}1 \ 1\end{bmatrix} =
-\begin{bmatrix}2 \ 5\end{bmatrix}
-]</p>
-<p>[
-A\hat{y} = \begin{bmatrix}1 &amp; 1 \ 2 &amp; 3\end{bmatrix}
-\begin{bmatrix}-1 \ 2\end{bmatrix} =
-\begin{bmatrix}1 \ 4\end{bmatrix}
-]</p>
-<p>\subsection*{Soal 2}</p>
-<p>[
-A = \begin{bmatrix}2 &amp; 0 \ -1 &amp; 3\end{bmatrix}
-]</p>
-<p>[
-A\hat{x} = \begin{bmatrix}2 &amp; 0 \ -1 &amp; 3\end{bmatrix}
-\begin{bmatrix}1 \ 1\end{bmatrix} =
-\begin{bmatrix}2 \ 2\end{bmatrix}
-]</p>
-<p>[
-A\hat{y} = \begin{bmatrix}2 &amp; 0 \ -1 &amp; 3\end{bmatrix}
-\begin{bmatrix}-1 \ 2\end{bmatrix} =
-\begin{bmatrix}-2 \ 7\end{bmatrix}
-]</p>
-<p>\subsection*{Catatan}</p>
-<p>\begin{itemize}
-\item Matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span> dapat mengubah basis standar vektor <span class="math notranslate nohighlight">\(\hat{x} = \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\hat{y} = \begin{bmatrix}0 \\ 1\end{bmatrix}\)</span>
-\item Vektor hasil transformasi <span class="math notranslate nohighlight">\(A\hat{x}\)</span> dan <span class="math notranslate nohighlight">\(A\hat{y}\)</span> menjadi kolom pertama dan kolom kedua dari matriks transformasi <span class="math notranslate nohighlight">\(A\)</span>
-\end{itemize}</p>
-<p>\section*{Soal 5}</p>
-<p>Diketahui:
-[
-A\hat{x} = \begin{bmatrix}1 \ 2\end{bmatrix}, \quad
-A\hat{y} = \begin{bmatrix}2 \ 3\end{bmatrix}
-]</p>
-<p>Maka matriks <span class="math notranslate nohighlight">\(A\)</span> adalah:
-[
-A = \begin{bmatrix}1 &amp; 2 \ 2 &amp; 3\end{bmatrix}
-]</p>
-<p>\section*{Soal 6}</p>
-<p>Diketahui:
-[
-A\hat{x} = \begin{bmatrix}1 \ 1\end{bmatrix}, \quad
-A\hat{y} = \begin{bmatrix}-1 \ 1\end{bmatrix}
-]</p>
-<p>Maka matriks <span class="math notranslate nohighlight">\(A\)</span> adalah:
-[
-A = \begin{bmatrix}1 &amp; -1 \ 1 &amp; 1\end{bmatrix}
-]</p>
-<p>\end{document}</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-matrik-transformation">
+<h1>Exercise Matrik Transformation<a class="headerlink" href="#exercise-matrik-transformation" title="Link to this heading">#</a></h1>
+<section id="latihan-kelompok">
+<h2>Latihan Kelompok<a class="headerlink" href="#latihan-kelompok" title="Link to this heading">#</a></h2>
+<p>Diberikan matriks A, gambar hasil transformasi vektor-vektor <span class="math notranslate nohighlight">\(\hat{x}\)</span> dan <span class="math notranslate nohighlight">\(\hat{y}\)</span> pada sumbu Cartesian yang sama.</p>
+<section id="matriks-a1">
+<h3>Matriks A1:<a class="headerlink" href="#matriks-a1" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left[\begin{array}{ll}
+1 &amp; 1 \\ 
+2 &amp; 3
+\end{array}\right]
+\end{split}\]</div>
+<p>a. <span class="math notranslate nohighlight">\(A \hat{x}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+A \hat{x}=\left[\begin{array}{ll}
+1 &amp; 1 \\ 
+2 &amp; 3
+\end{array}\right]\left[\begin{array}{l}
+1 \\
+1
+\end{array}\right]=\left[\begin{array}{l}
+2 \\
+5
+\end{array}\right]
+\end{split}\]</div>
+<p>b. <span class="math notranslate nohighlight">\(A \hat{y}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \hat{y}=\left[\begin{array}{ll}
+1 &amp; 1 \\ 
+2 &amp; 3
+\end{array}\right]\left[\begin{array}{c}
+-1 \\
+2
+\end{array}\right]=\left[\begin{array}{l}
+1 \\
+4
+\end{array}\right]
+\end{split}\]</div>
+</section>
+<section id="matriks-a2">
+<h3>Matriks A2:<a class="headerlink" href="#matriks-a2" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left[\begin{array}{cc}
+2 &amp; 0 \\ 
+-1 &amp; 3
+\end{array}\right]
+\end{split}\]</div>
+<p>a. <span class="math notranslate nohighlight">\(A \hat{x}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \hat{x}=\left[\begin{array}{cc}
+2 &amp; 0 \\ 
+-1 &amp; 3
+\end{array}\right]\left[\begin{array}{l}
+1 \\
+1
+\end{array}\right]=\left[\begin{array}{l}
+2 \\
+2
+\end{array}\right]
+\end{split}\]</div>
+<p>b. <span class="math notranslate nohighlight">\(A \hat{y}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \hat{y}=\left[\begin{array}{cc}
+2 &amp; 0 \\ 
+-1 &amp; 3
+\end{array}\right]\left[\begin{array}{c}
+-1 \\
+2
+\end{array}\right]=\left[\begin{array}{c}
+-2 \\
+7
+\end{array}\right]
+\end{split}\]</div>
+</section>
+</section>
+<section id="kelompok-latihan">
+<h2>Kelompok Latihan<a class="headerlink" href="#kelompok-latihan" title="Link to this heading">#</a></h2>
+<p>Sketsa persegi satuan yang telah ditransformasikan diberikan. Temukan matriks A yang melakukan transformasi ini.</p>
+<p><img alt="image" src="_images/1.png" /></p>
+<section id="soal-5">
+<h3>Soal 5<a class="headerlink" href="#soal-5" title="Link to this heading">#</a></h3>
+<p>Langkah 1: Identifikasi transformasi dari gambar</p>
+<ul class="simple">
+<li><p>Vektor <span class="math notranslate nohighlight">\(\hat{x}\)</span> ditransformasikan menjadi:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \hat{x}=\left[\begin{array}{l}
+1 \\
+2
+\end{array}\right]
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Vektor <span class="math notranslate nohighlight">\(\hat{y}\)</span> ditransformasikan menjadi:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \hat{y}=\left[\begin{array}{l}
+2 \\
+3
+\end{array}\right]
+\end{split}\]</div>
+<p>Langkah 2: Susun Matriks Transformasi</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left[\begin{array}{ll}
+1 &amp; 2 \\
+2 &amp; 3
+\end{array}\right]
+\end{split}\]</div>
+</section>
+<section id="soal-6">
+<h3>Soal 6<a class="headerlink" href="#soal-6" title="Link to this heading">#</a></h3>
+<p>Langkah 1: Identifikasi transformasi dari gambar</p>
+<ul class="simple">
+<li><p>Vektor <span class="math notranslate nohighlight">\(\hat{x}\)</span> ditransformasikan menjadi:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \hat{x}=\left[\begin{array}{l}
+1 \\
+1
+\end{array}\right]
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Vektor <span class="math notranslate nohighlight">\(\hat{y}\)</span> ditransformasikan menjadi:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \hat{y}=\left[\begin{array}{c}
+-1 \\
+1
+\end{array}\right]
+\end{split}\]</div>
+<p>Langkah 2: Susun Matriks Transformasi</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\left[\begin{array}{cc}
+1 &amp; -1 \\
+1 &amp; 1
+\end{array}\right]
+\end{split}\]</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -503,9 +596,18 @@ A = \begin{bmatrix}1 &amp; -1 \ 1 &amp; 1\end{bmatrix}
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-kelompok">Latihan Kelompok</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a1">Matriks A1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a2">Matriks A2:</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelompok-latihan">Kelompok Latihan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5">Soal 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6">Soal 6</a></li>
+</ul>
+</li>
+</ul>
   </nav></div>
 
 </div></div>
