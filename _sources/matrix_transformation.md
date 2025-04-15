@@ -282,7 +282,7 @@ Terhadap sumbu y = -x
 
 ---
 title: Tugas Exercise
-
+# Tugas
 ---
 
 # Exercise Matrik Transformation
