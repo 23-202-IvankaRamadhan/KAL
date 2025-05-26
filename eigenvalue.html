@@ -185,8 +185,6 @@
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Definisi Eigenvalue, Eigenvector</strong></a></li>
 
-
-
 </ul>
 
     </div>
@@ -379,42 +377,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Definisi Eigenvalue, Eigenvector</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pertama-matriks-a-didefinisikan-sebagai-matriks-2x2-dengan-elemen-elemen-2-1-1-2-fungsi-np-linalg-eig-digunakan-untuk-menghitung-eigenvalue-dan-eigenvector-dari-matriks-ini-eigenvalue-adalah-skalar-yang-memenuhi-persamaan-karakteristik-det">Pertama, matriks
-𝐴
-A didefinisikan sebagai matriks 2x2 dengan elemen-elemen
-[
-2
-1
-]
-[
-1
-2
-]
-. Fungsi np.linalg.eig() digunakan untuk menghitung eigenvalue dan eigenvector dari matriks ini. Eigenvalue adalah skalar
-𝜆
-λ yang memenuhi persamaan karakteristik
-det
-⁡
-(
-𝐴
-−
-𝜆
-𝐼
-)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#setelah-mendapatkan-nilai-nilai-eigenvalue-tersebut-fungsi-ini-juga-mencari-eigenvector-yaitu-vektor-vektor-bukan-nol-v-v-yang-memenuhi-persamaan-v">Setelah mendapatkan nilai-nilai eigenvalue tersebut, fungsi ini juga mencari eigenvector, yaitu vektor-vektor bukan nol
-𝑣
-⃗
-v
-yang memenuhi persamaan
-(
-𝐴
-−
-𝜆
-𝐼
-)
-𝑣
-⃗</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Definisi Eigenvalue, Eigenvector</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-kode-python-eigenvalue-dan-eigenvector-matriks">Penjelasan Kode Python: Eigenvalue dan Eigenvector Matriks</a></li>
 </ul>
 </li>
@@ -467,63 +430,90 @@ EigenVectors [[ 0.70710678 -0.70710678]
 </div>
 </div>
 </div>
-<p><strong>Penjelasan Code Diatas</strong></p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="pertama-matriks-a-didefinisikan-sebagai-matriks-2x2-dengan-elemen-elemen-2-1-1-2-fungsi-np-linalg-eig-digunakan-untuk-menghitung-eigenvalue-dan-eigenvector-dari-matriks-ini-eigenvalue-adalah-skalar-yang-memenuhi-persamaan-karakteristik-det">
-<h1>Pertama, matriks
-𝐴
-A didefinisikan sebagai matriks 2x2 dengan elemen-elemen
-[
-2
-1
-]
-[
-1
-2
-]
-. Fungsi np.linalg.eig() digunakan untuk menghitung eigenvalue dan eigenvector dari matriks ini. Eigenvalue adalah skalar
-𝜆
-λ yang memenuhi persamaan karakteristik
-det
-⁡
-(
-𝐴
-−
-𝜆
-𝐼
-)<a class="headerlink" href="#pertama-matriks-a-didefinisikan-sebagai-matriks-2x2-dengan-elemen-elemen-2-1-1-2-fungsi-np-linalg-eig-digunakan-untuk-menghitung-eigenvalue-dan-eigenvector-dari-matriks-ini-eigenvalue-adalah-skalar-yang-memenuhi-persamaan-karakteristik-det" title="Link to this heading">#</a></h1>
-<p>0
-det(A−λI)=0, di mana
-𝐼
-I adalah matriks identitas. Persamaan ini menghasilkan nilai-nilai
-𝜆
-λ yang menunjukkan faktor skala perubahan vektor setelah transformasi oleh
-𝐴
-A.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="setelah-mendapatkan-nilai-nilai-eigenvalue-tersebut-fungsi-ini-juga-mencari-eigenvector-yaitu-vektor-vektor-bukan-nol-v-v-yang-memenuhi-persamaan-v">
-<h1>Setelah mendapatkan nilai-nilai eigenvalue tersebut, fungsi ini juga mencari eigenvector, yaitu vektor-vektor bukan nol
-𝑣
-⃗
-v
-yang memenuhi persamaan
-(
-𝐴
-−
-𝜆
-𝐼
-)
-𝑣
-⃗<a class="headerlink" href="#setelah-mendapatkan-nilai-nilai-eigenvalue-tersebut-fungsi-ini-juga-mencari-eigenvector-yaitu-vektor-vektor-bukan-nol-v-v-yang-memenuhi-persamaan-v" title="Link to this heading">#</a></h1>
-<p>0
-(A−λI)
-v
-=0 untuk setiap eigenvalue
-𝜆
-λ. Eigenvector ini memiliki arah yang tidak berubah saat dimultiplikasikan oleh matriks
-𝐴
-A, hanya skalanya yang berubah sesuai dengan eigenvalue terkait.</p>
-<p>Output yang dicetak berupa array nilai eigenvalue dan matriks eigenvector, di mana setiap kolom pada matriks eigenvector berkorespondensi dengan eigenvalue di posisi yang sama pada array eigenvalue. Eigenvector biasanya sudah dinormalisasi sehingga panjangnya 1.</p>
+<p>Diberikan matriks</p>
+<p>[
+A = \begin{bmatrix}
+2 &amp; 1 \
+1 &amp; 2
+\end{bmatrix}
+]</p>
+<p>Kita ingin mencari nilai eigen ((\lambda)) dan vektor eigen ((v)) yang memenuhi persamaan</p>
+<p>[
+A v = \lambda v
+]</p>
+<p>Nilai eigen (\lambda) adalah skalar yang membuat persamaan tersebut benar, dan vektor eigen (v) adalah vektor tidak nol yang berubah hanya skala ketika dikalikan oleh matriks (A).</p>
+<p>Untuk mencari nilai eigen, kita selesaikan persamaan karakteristik</p>
+<p>[
+\det(A - \lambda I) = 0
+]</p>
+<p>dengan (I) adalah matriks identitas. Matriks karakteristik adalah</p>
+<p>[
+A - \lambda I = \begin{bmatrix}
+2 - \lambda &amp; 1 \
+1 &amp; 2 - \lambda
+\end{bmatrix}
+]</p>
+<p>Menghitung determinan memberikan</p>
+<p>[
+(2 - \lambda)(2 - \lambda) - 1 \times 1 = (\lambda^2 - 4\lambda + 3) = 0
+]</p>
+<p>Menyelesaikan persamaan kuadrat ini</p>
+<p>[
+\lambda^2 - 4\lambda + 3 = 0
+]</p>
+<p>dengan rumus kuadrat</p>
+<p>[
+\lambda = \frac{4 \pm \sqrt{16 - 12}}{2} = \frac{4 \pm 2}{2}
+]</p>
+<p>menghasilkan dua nilai eigen</p>
+<p>[
+\lambda_1 = 3, \quad \lambda_2 = 1
+]</p>
+<p>Setelah menemukan nilai eigen, kita tentukan vektor eigen dengan menyelesaikan</p>
+<p>[
+(A - \lambda I)v = 0
+]</p>
+<p>Untuk (\lambda_1 = 3), matriksnya menjadi</p>
+<p>[
+A - 3I = \begin{bmatrix}
+-1 &amp; 1 \
+1 &amp; -1
+\end{bmatrix}
+]</p>
+<p>Menyelesaikan sistem linear ini menghasilkan vektor eigen</p>
+<p>[
+v_1 = \begin{bmatrix} 1 \ 1 \end{bmatrix}
+]</p>
+<p>Untuk (\lambda_2 = 1), matriksnya menjadi</p>
+<p>[
+A - I = \begin{bmatrix}
+1 &amp; 1 \
+1 &amp; 1
+\end{bmatrix}
+]</p>
+<p>dan vektor eigen yang diperoleh adalah</p>
+<p>[
+v_2 = \begin{bmatrix} 1 \ -1 \end{bmatrix}
+]</p>
+<p>Untuk membandingkan hasil ini dengan hasil dari perhitungan numerik (misalnya menggunakan NumPy), vektor-vektor eigen biasanya dinormalisasi sehingga memiliki panjang satu, yaitu</p>
+<p>[
+v_{\text{normalized}} = \frac{v}{|v|}
+]</p>
+<p>dengan norma vektor</p>
+<p>[
+|v| = \sqrt{v_1^2 + v_2^2}
+]</p>
+<p>Dalam kasus ini</p>
+<p>[
+|v_1| = \sqrt{1^2 + 1^2} = \sqrt{2}, \quad
+|v_2| = \sqrt{1^2 + (-1)^2} = \sqrt{2}
+]</p>
+<p>Sehingga vektor eigen yang ternormalisasi adalah</p>
+<p>[
+v_1^{norm} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \ 1 \end{bmatrix}, \quad
+v_2^{norm} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \ -1 \end{bmatrix}
+]</p>
+<p>Dengan demikian, proses ini menjelaskan bagaimana nilai dan vektor eigen dari matriks (A) dapat dihitung secara analitik dan dibandingkan dengan hasil numerik dari metode komputer.</p>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1146,42 +1136,7 @@ v_2^{norm} = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \ -1 \end{bmatrix}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Definisi Eigenvalue, Eigenvector</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pertama-matriks-a-didefinisikan-sebagai-matriks-2x2-dengan-elemen-elemen-2-1-1-2-fungsi-np-linalg-eig-digunakan-untuk-menghitung-eigenvalue-dan-eigenvector-dari-matriks-ini-eigenvalue-adalah-skalar-yang-memenuhi-persamaan-karakteristik-det">Pertama, matriks
-𝐴
-A didefinisikan sebagai matriks 2x2 dengan elemen-elemen
-[
-2
-1
-]
-[
-1
-2
-]
-. Fungsi np.linalg.eig() digunakan untuk menghitung eigenvalue dan eigenvector dari matriks ini. Eigenvalue adalah skalar
-𝜆
-λ yang memenuhi persamaan karakteristik
-det
-⁡
-(
-𝐴
-−
-𝜆
-𝐼
-)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#setelah-mendapatkan-nilai-nilai-eigenvalue-tersebut-fungsi-ini-juga-mencari-eigenvector-yaitu-vektor-vektor-bukan-nol-v-v-yang-memenuhi-persamaan-v">Setelah mendapatkan nilai-nilai eigenvalue tersebut, fungsi ini juga mencari eigenvector, yaitu vektor-vektor bukan nol
-𝑣
-⃗
-v
-yang memenuhi persamaan
-(
-𝐴
-−
-𝜆
-𝐼
-)
-𝑣
-⃗</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Definisi Eigenvalue, Eigenvector</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-kode-python-eigenvalue-dan-eigenvector-matriks">Penjelasan Kode Python: Eigenvalue dan Eigenvector Matriks</a></li>
 </ul>
 </li>
