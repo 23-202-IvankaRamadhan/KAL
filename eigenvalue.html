@@ -1,0 +1,1201 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Definisi Eigenvalue, Eigenvector &#8212; Komputasi Aljabar Linier</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'eigenvalue';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Komputasi Aljabar Linier - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Komputasi Aljabar Linier - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Materi Komputasi Aljabar Linier
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Persamaan Sistem Linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sistem_persamaan_2variable_3variabel.html">penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="invers%20matriks.html">INVERS MATRIK</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="matrix_transformation.html">Matrix Transformations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tugas_transformation.html">Exercise Matrix Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tugas_matrix_transformation.html">TUGAS MATRIK TRANSFORMASI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transformasi.html">Refleksi</a></li>
+
+
+
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Feigenvalue.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/eigenvalue.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Definisi Eigenvalue, Eigenvector</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Definisi Eigenvalue, Eigenvector</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-kode-python-eigenvalue-dan-eigenvector-matriks">Penjelasan Kode Python: Eigenvalue dan Eigenvector Matriks</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-ortonormal-dan-ortogonal"><strong>Definisi Ortonormal dan Ortogonal</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-lengkap-kode-python-eigenvalue-dan-eigenvector-matriks">Penjelasan Lengkap Kode Python: Eigenvalue dan Eigenvector Matriks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matriks-a">1. <strong>Definisi Matriks ( A )</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-eigenvalues-dan-eigenvectors-dengan-numpy">2. <strong>Menghitung Eigenvalues dan Eigenvectors dengan NumPy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verifikasi-manual-menentukan-eigenvalues">3. <strong>Verifikasi Manual: Menentukan Eigenvalues</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-eigenvectors-untuk-setiap-eigenvalue">4. <strong>Menentukan Eigenvectors untuk Setiap Eigenvalue</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-eigenvectors">5. <strong>Normalisasi Eigenvectors</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perbandingan-dengan-hasil-numpy">6. <strong>Perbandingan dengan Hasil NumPy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">7. <strong>Kesimpulan</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="definisi-eigenvalue-eigenvector">
+<h1><strong>Definisi Eigenvalue, Eigenvector</strong><a class="headerlink" href="#definisi-eigenvalue-eigenvector" title="Link to this heading">#</a></h1>
+<p><strong>Nilai eigen (eigenvalue)</strong> adalah skalar yang terkait dengan matriks persegi dan vektor eigen, yang menggambarkan bagaimana matriks tersebut merubah vektor tersebut saat dikalikan</p>
+<p><strong>Vektor eigen (eigenvector)</strong> adalah vektor yang, setelah mengalami transformasi linier (biasanya oleh suatu matriks), tetap sejajar dengan vektor asalnya, hanya berubah dalam skala (panjang) saja</p>
+<div class="math notranslate nohighlight">
+\[ A v = λ v \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EigenValues&quot;</span><span class="p">,</span> <span class="n">eigenvalues</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EigenVectors&quot;</span><span class="p">,</span> <span class="n">eigenvectors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EigenValues [3. 1.]
+EigenVectors [[ 0.70710678 -0.70710678]
+ [ 0.70710678  0.70710678]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Diberikan matriks</p>
+<p>[
+A = \begin{bmatrix}
+2 &amp; 1 \
+1 &amp; 2
+\end{bmatrix}
+]</p>
+<p>Kita ingin mencari nilai eigen ((\lambda)) dan vektor eigen ((v)) yang memenuhi persamaan</p>
+<p>[
+A v = \lambda v
+]</p>
+<p>Nilai eigen (\lambda) adalah skalar yang membuat persamaan tersebut benar, dan vektor eigen (v) adalah vektor tidak nol yang berubah hanya skala ketika dikalikan oleh matriks (A).</p>
+<p>Untuk mencari nilai eigen, kita selesaikan persamaan karakteristik</p>
+<p>[
+\det(A - \lambda I) = 0
+]</p>
+<p>dengan (I) adalah matriks identitas. Matriks karakteristik adalah</p>
+<p>[
+A - \lambda I = \begin{bmatrix}
+2 - \lambda &amp; 1 \
+1 &amp; 2 - \lambda
+\end{bmatrix}
+]</p>
+<p>Menghitung determinan memberikan</p>
+<p>[
+(2 - \lambda)(2 - \lambda) - 1 \times 1 = (\lambda^2 - 4\lambda + 3) = 0
+]</p>
+<p>Menyelesaikan persamaan kuadrat ini</p>
+<p>[
+\lambda^2 - 4\lambda + 3 = 0
+]</p>
+<p>dengan rumus kuadrat</p>
+<p>[
+\lambda = \frac{4 \pm \sqrt{16 - 12}}{2} = \frac{4 \pm 2}{2}
+]</p>
+<p>menghasilkan dua nilai eigen</p>
+<p>[
+\lambda_1 = 3, \quad \lambda_2 = 1
+]</p>
+<p>Setelah menemukan nilai eigen, kita tentukan vektor eigen dengan menyelesaikan</p>
+<p>[
+(A - \lambda I)v = 0
+]</p>
+<p>Untuk (\lambda_1 = 3), matriksnya menjadi</p>
+<p>[
+A - 3I = \begin{bmatrix}
+-1 &amp; 1 \
+1 &amp; -1
+\end{bmatrix}
+]</p>
+<p>Menyelesaikan sistem linear ini menghasilkan vektor eigen</p>
+<p>[
+v_1 = \begin{bmatrix} 1 \ 1 \end{bmatrix}
+]</p>
+<p>Untuk (\lambda_2 = 1), matriksnya menjadi</p>
+<p>[
+A - I = \begin{bmatrix}
+1 &amp; 1 \
+1 &amp; 1
+\end{bmatrix}
+]</p>
+<p>dan vektor eigen yang diperoleh adalah</p>
+<p>[
+v_2 = \begin{bmatrix} 1 \ -1 \end{bmatrix}
+]</p>
+<p>Untuk membandingkan hasil ini dengan hasil dari perhitungan numerik (misalnya menggunakan NumPy), vektor-vektor eigen biasanya dinormalisasi sehingga memiliki panjang satu, yaitu</p>
+<p>[
+v_{\text{normalized}} = \frac{v}{|v|}
+]</p>
+<p>dengan norma vektor</p>
+<p>[
+|v| = \sqrt{v_1^2 + v_2^2}
+]</p>
+<p>Dalam kasus ini</p>
+<p>[
+|v_1| = \sqrt{1^2 + 1^2} = \sqrt{2}, \quad
+|v_2| = \sqrt{1^2 + (-1)^2} = \sqrt{2}
+]</p>
+<p>Sehingga vektor eigen yang ternormalisasi adalah</p>
+<p>[
+v_1^{norm} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \ 1 \end{bmatrix}, \quad
+v_2^{norm} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \ -1 \end{bmatrix}
+]</p>
+<p>Dengan demikian, proses ini menjelaskan bagaimana nilai dan vektor eigen dari matriks (A) dapat dihitung secara analitik dan dibandingkan dengan hasil numerik dari metode komputer.</p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># 1. Definisi matriks A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># 2. Menghitung eigenvalues dan eigenvectors menggunakan numpy</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># 3. Menampilkan hasil dari numpy</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil dari NumPy:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues (nilai eigen):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvectors (vektor eigen):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">)</span>
+
+<span class="c1"># 4. Verifikasi manual - Langkah-langkah mencari eigenvalues</span>
+<span class="c1"># Matriks karakteristik: |A - λI| = 0</span>
+<span class="c1"># A - λI = [[2 - λ, 1],</span>
+<span class="c1">#           [1, 2 - λ]]</span>
+<span class="c1"># Determinan:</span>
+<span class="c1"># (2 - λ)(2 - λ) - 1*1 = λ^2 - 4λ + 3 = 0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Langkah Manual:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Karakteristik persamaan: λ^2 - 4λ + 3 = 0&quot;</span><span class="p">)</span>
+
+<span class="c1"># 5. Menyelesaikan persamaan kuadrat λ^2 - 4λ + 3 = 0</span>
+<span class="c1"># Menggunakan rumus kuadrat:</span>
+<span class="c1"># λ = [-b ± sqrt(b^2 - 4ac)] / 2a</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">discriminant</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+<span class="n">lambda1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">discriminant</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<span class="n">lambda2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">discriminant</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Eigenvalue 1: </span><span class="si">{</span><span class="n">lambda1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Eigenvalue 2: </span><span class="si">{</span><span class="n">lambda2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 6. Menentukan eigenvector untuk masing-masing eigenvalue</span>
+
+<span class="c1"># Untuk λ = 3:</span>
+<span class="c1"># (A - 3I)v = 0 → [[-1, 1], [1, -1]]v = 0 → solusi: v1 = [1, 1]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Untuk λ = 3:&quot;</span><span class="p">)</span>
+<span class="n">A_minus_3I</span> <span class="o">=</span> <span class="n">A</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A - 3I:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_minus_3I</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solusi vektor eigen: v1 = [1, 1]&quot;</span><span class="p">)</span>
+
+<span class="c1"># Untuk λ = 1:</span>
+<span class="c1"># (A - 1I)v = 0 → [[1, 1], [1, 1]]v = 0 → solusi: v2 = [1, -1]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Untuk λ = 1:&quot;</span><span class="p">)</span>
+<span class="n">A_minus_1I</span> <span class="o">=</span> <span class="n">A</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A - 1I:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_minus_1I</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solusi vektor eigen: v2 = [1, -1]&quot;</span><span class="p">)</span>
+
+<span class="c1"># 7. Normalisasi vektor eigen untuk dibandingkan dengan numpy</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">v1_normalized</span> <span class="o">=</span> <span class="n">v1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">v2_normalized</span> <span class="o">=</span> <span class="n">v2</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Normalisasi manual eigenvectors:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v1 normalized:&quot;</span><span class="p">,</span> <span class="n">v1_normalized</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v2 normalized:&quot;</span><span class="p">,</span> <span class="n">v2_normalized</span><span class="p">)</span>
+
+<span class="c1"># 8. Bandingkan hasil manual dengan hasil NumPy</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Perbandingan dengan NumPy:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvector dari NumPy untuk λ = 3 (kolom 0):&quot;</span><span class="p">,</span> <span class="n">eigenvectors</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvector dari NumPy untuk λ = 1 (kolom 1):&quot;</span><span class="p">,</span> <span class="n">eigenvectors</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks A:
+[[2 1]
+ [1 2]]
+
+Hasil dari NumPy:
+Eigenvalues (nilai eigen):
+[3. 1.]
+Eigenvectors (vektor eigen):
+[[ 0.70710678 -0.70710678]
+ [ 0.70710678  0.70710678]]
+
+Langkah Manual:
+Karakteristik persamaan: λ^2 - 4λ + 3 = 0
+Eigenvalue 1: 3.0
+Eigenvalue 2: 1.0
+
+Untuk λ = 3:
+A - 3I:
+[[-1.  1.]
+ [ 1. -1.]]
+Solusi vektor eigen: v1 = [1, 1]
+
+Untuk λ = 1:
+A - 1I:
+[[1. 1.]
+ [1. 1.]]
+Solusi vektor eigen: v2 = [1, -1]
+
+Normalisasi manual eigenvectors:
+v1 normalized: [0.70710678 0.70710678]
+v2 normalized: [ 0.70710678 -0.70710678]
+
+Perbandingan dengan NumPy:
+Eigenvector dari NumPy untuk λ = 3 (kolom 0): [0.70710678 0.70710678]
+Eigenvector dari NumPy untuk λ = 1 (kolom 1): [-0.70710678  0.70710678]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="penjelasan-kode-python-eigenvalue-dan-eigenvector-matriks">
+<h2>Penjelasan Kode Python: Eigenvalue dan Eigenvector Matriks<a class="headerlink" href="#penjelasan-kode-python-eigenvalue-dan-eigenvector-matriks" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Definisi Matriks A</strong></p></li>
+</ol>
+<p>Kode mendefinisikan matriks:
+$<span class="math notranslate nohighlight">\(
+A = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}
+\)</span>$</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Menghitung Eigenvalue dan Eigenvector Menggunakan NumPy</strong></p></li>
+</ol>
+<p>Fungsi <code class="docutils literal notranslate"><span class="pre">np.linalg.eig(A)</span></code> digunakan untuk menghitung eigenvalue (<span class="math notranslate nohighlight">\(\lambda\)</span>) dan eigenvector (<span class="math notranslate nohighlight">\(v\)</span>) dari matriks <span class="math notranslate nohighlight">\(A\)</span>. Hasilnya disimpan dalam variabel:
+$<span class="math notranslate nohighlight">\(
+\text{eigenvalues}, \quad \text{eigenvectors}
+\)</span>$</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Verifikasi Manual: Menentukan Eigenvalue</strong></p></li>
+</ol>
+<p>Langkah manual:</p>
+<ul class="simple">
+<li><p>Bentuk matriks karakteristik:
+$<span class="math notranslate nohighlight">\(
+A - \lambda I = \begin{bmatrix} 2 - \lambda &amp; 1 \\ 1 &amp; 2 - \lambda \end{bmatrix}
+\)</span>$</p></li>
+<li><p>Determinan:
+$<span class="math notranslate nohighlight">\(
+|A - \lambda I| = (2 - \lambda)(2 - \lambda) - (1 \cdot 1) = \lambda^2 - 4\lambda + 3 = 0
+\)</span>$</p></li>
+<li><p>Selesaikan persamaan kuadrat:
+$<span class="math notranslate nohighlight">\(
+\lambda = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\)</span><span class="math notranslate nohighlight">\(
+Dengan:
+\)</span><span class="math notranslate nohighlight">\(
+a = 1, \quad b = -4, \quad c = 3
+\)</span><span class="math notranslate nohighlight">\(
+Diskriminan:
+\)</span><span class="math notranslate nohighlight">\(
+\Delta = b^2 - 4ac = 16 - 12 = 4
+\)</span><span class="math notranslate nohighlight">\(
+Hasil:
+\)</span><span class="math notranslate nohighlight">\(
+\lambda_1 = 3, \quad \lambda_2 = 1
+\)</span>$</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p><strong>Menentukan Eigenvector</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Untuk <span class="math notranslate nohighlight">\(\lambda = 3\)</span>:
+$<span class="math notranslate nohighlight">\(
+A - 3I = \begin{bmatrix} -1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Penyelesaian:
+\)</span><span class="math notranslate nohighlight">\(
+v_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\)</span>$</p></li>
+<li><p>Untuk <span class="math notranslate nohighlight">\(\lambda = 1\)</span>:
+$<span class="math notranslate nohighlight">\(
+A - I = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Penyelesaian:
+\)</span><span class="math notranslate nohighlight">\(
+v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+\)</span>$</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p><strong>Normalisasi Eigenvector</strong></p></li>
+</ol>
+<p>Untuk membandingkan dengan hasil dari NumPy, eigenvector dinormalisasi:
+$<span class="math notranslate nohighlight">\(
+v_{\text{normalized}} = \frac{v}{\|v\|}
+\)</span><span class="math notranslate nohighlight">\(
+Untuk:
+\)</span><span class="math notranslate nohighlight">\(
+v_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad \|v_1\| = \sqrt{1^2 + 1^2} = \sqrt{2}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}, \quad \|v_2\| = \sqrt{1^2 + (-1)^2} = \sqrt{2}
+\)</span>$</p>
+<ol class="arabic simple" start="6">
+<li><p><strong>Perbandingan dengan Hasil NumPy</strong></p></li>
+</ol>
+<p>Hasil manual yang dinormalisasi dibandingkan dengan hasil NumPy:</p>
+<ul class="simple">
+<li><p>Kolom ke-0 dari <code class="docutils literal notranslate"><span class="pre">eigenvectors</span></code> sesuai untuk <span class="math notranslate nohighlight">\(\lambda = 3\)</span></p></li>
+<li><p>Kolom ke-1 dari <code class="docutils literal notranslate"><span class="pre">eigenvectors</span></code> sesuai untuk <span class="math notranslate nohighlight">\(\lambda = 1\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Vektor hasil manual</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># Fungsi untuk normalisasi vektor</span>
+<span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">v</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+<span class="c1"># Vektor yang sudah dinormalisasi</span>
+<span class="n">v1_norm</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="n">v2_norm</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektor [2, 1] setelah dinormalisasi:&quot;</span><span class="p">,</span> <span class="n">v1_norm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektor [1, 2] setelah dinormalisasi:&quot;</span><span class="p">,</span> <span class="n">v2_norm</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+<span class="c1"># Plot vektor asli</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v1 = [2,1]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v2 = [1,2]&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot vektor yang sudah dinormalisasi (tanpa linestyle karena quiver tidak support linestyle)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v1_norm</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v1_norm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v1 norm&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v2_norm</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v2_norm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v2 norm&#39;</span><span class="p">)</span>
+
+<span class="c1"># Atur batas sumbu</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Diagram Vektor dan Normalisasi Vektor&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vektor [2, 1] setelah dinormalisasi: [0.89442719 0.4472136 ]
+Vektor [1, 2] setelah dinormalisasi: [0.4472136  0.89442719]
+</pre></div>
+</div>
+<img alt="_images/bf42582c2ce6de1613407e798d84de0cd1cfc442ac3c665c3dfe43462608b64c.png" src="_images/bf42582c2ce6de1613407e798d84de0cd1cfc442ac3c665c3dfe43462608b64c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Vektor sesuai elemen matriks [[8, -10], [5, -7]]</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">])</span>
+
+<span class="c1"># Fungsi untuk normalisasi vektor</span>
+<span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">v</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+<span class="c1"># Vektor yang sudah dinormalisasi</span>
+<span class="n">v1_norm</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="n">v2_norm</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektor [8, -10] setelah dinormalisasi:&quot;</span><span class="p">,</span> <span class="n">v1_norm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektor [5, -7] setelah dinormalisasi:&quot;</span><span class="p">,</span> <span class="n">v2_norm</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+<span class="c1"># Plot vektor asli</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v1 = [8, -10]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v2 = [5, -7]&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot vektor yang sudah dinormalisasi</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v1_norm</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v1_norm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v1 norm&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v2_norm</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v2_norm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v2 norm&#39;</span><span class="p">)</span>
+
+<span class="c1"># Atur batas sumbu supaya pas dengan vektor panjang</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Diagram Vektor dan Normalisasi Vektor&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vektor [8, -10] setelah dinormalisasi: [ 0.62469505 -0.78086881]
+Vektor [5, -7] setelah dinormalisasi: [ 0.58123819 -0.81373347]
+</pre></div>
+</div>
+<img alt="_images/beedcb064bb1046c5d87ca1ca85dce51c52e3e46e8419ea7800b3470cd009520.png" src="_images/beedcb064bb1046c5d87ca1ca85dce51c52e3e46e8419ea7800b3470cd009520.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">Matrix</span><span class="p">,</span> <span class="n">Rational</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektor satuan simbolik:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vektor satuan simbolik:
+Matrix([[sqrt(2)/2], [sqrt(2)/2]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="definisi-ortonormal-dan-ortogonal">
+<h1><strong>Definisi Ortonormal dan Ortogonal</strong><a class="headerlink" href="#definisi-ortonormal-dan-ortogonal" title="Link to this heading">#</a></h1>
+<p><strong>Pengertian Ortogonal</strong></p>
+<p>Ortogonal adalah istilah dalam matematika yang digunakan untuk menyebut dua buah objek, biasanya vektor, yang saling tegak lurus satu sama lain. Jika kita bayangkan dua garis di bidang datar atau ruang, kedua garis itu dikatakan ortogonal jika sudut di antara mereka tepat 90 derajat, atau dengan kata lain mereka membentuk sudut siku-siku. Dalam konteks aljabar vektor, ketika dua vektor disebut ortogonal, itu berarti tidak ada komponen satu vektor yang “mengarah” ke arah vektor lainnya — mereka berdiri sendiri-sendiri dan tidak saling memengaruhi dalam arah.</p>
+<p>Ortogonalitas menjadi konsep yang sangat penting dalam banyak bidang, mulai dari geometri, aljabar linear, analisis data, hingga ilmu komputer, karena ia membantu memisahkan atau memecah suatu masalah menjadi bagian-bagian yang independen atau tidak saling terkait. Misalnya, dalam pemrosesan sinyal atau gambar, basis ortogonal sering digunakan untuk memecah data menjadi komponen-komponen yang mudah diolah. Dalam ruang vektor, konsep ortogonalitas membantu memudahkan perhitungan karena ketika dua vektor ortogonal, hubungan matematis di antara mereka menjadi sederhana.</p>
+<p>Selain itu, dua fungsi atau dua vektor ortogonal sering dianggap “tidak berhubungan” atau “independen” satu sama lain. Artinya, satu tidak membawa informasi tentang yang lain. Ini sebabnya ortogonalitas sering digunakan dalam teknik pemisahan sinyal atau dalam algoritma kompresi data, karena kita bisa memecah informasi kompleks menjadi blok-blok sederhana yang tidak saling campur.</p>
+<hr class="docutils" />
+<p><strong>Pengertian Ortonormal</strong></p>
+<p>Ortonormal adalah istilah yang menggabungkan dua sifat penting dari sekelompok vektor, yaitu ortogonalitas dan normalitas. Kita sudah tahu bahwa ortogonal berarti saling tegak lurus. Sementara itu, normal berarti setiap vektor memiliki panjang satu, atau sering disebut sebagai vektor satuan. Jadi, sekumpulan vektor dikatakan ortonormal jika setiap pasangan vektor di dalamnya saling ortogonal (tegak lurus) dan setiap vektor di dalam kelompok itu memiliki panjang atau norma satu.</p>
+<p>Mengapa ortonormal penting? Karena sekumpulan vektor ortonormal membentuk apa yang disebut sebagai basis ortonormal di dalam suatu ruang vektor. Basis ortonormal mempermudah hampir semua perhitungan dalam ruang tersebut. Misalnya, untuk mencari proyeksi suatu vektor ke dalam basis ortonormal, kita tidak perlu melakukan perhitungan yang rumit. Selain itu, transformasi yang dinyatakan menggunakan basis ortonormal biasanya menjaga jarak dan sudut, sehingga sifat-sifat geometri tetap terpelihara. Ini sangat berguna dalam bidang seperti komputer grafis, machine learning, statistika, fisika, dan banyak lagi.</p>
+<p>Kita bisa membayangkan ortonormal sebagai tim yang sangat teratur dan efisien. Setiap anggota tim (vektor) punya arah yang berbeda dengan anggota lainnya (tegak lurus) dan semuanya bekerja dengan kekuatan penuh yang sama (panjang satu). Tidak ada yang saling tumpang tindih atau saling mengurangi satu sama lain. Karena sifat ini, ortonormal sering digunakan dalam perhitungan numerik untuk menjaga kestabilan algoritma, seperti dalam dekomposisi matriks dan analisis data dimensi tinggi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Definisi matriks A (simetris)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+
+<span class="c1"># Hitung eigenvalues dan eigenvectors</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Eigenvectors (belum normalisasi):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">)</span>
+
+<span class="c1"># Normalisasi setiap kolom vektor eigen (jadi panjangnya 1)</span>
+<span class="n">eigenvectors_orthonormal</span> <span class="o">=</span> <span class="n">eigenvectors</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Eigenvectors setelah normalisasi (orthonormal):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors_orthonormal</span><span class="p">)</span>
+
+<span class="c1"># Cek orthonormalitas:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Cek dot product antar vektor eigen (harus dekat 0):&quot;</span><span class="p">)</span>
+<span class="n">dot_product</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">eigenvectors_orthonormal</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">eigenvectors_orthonormal</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dot product vektor 1 dan 2: </span><span class="si">{</span><span class="n">dot_product</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Cek norma (panjang) tiap vektor eigen (harus 1):&quot;</span><span class="p">)</span>
+<span class="n">norm1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">eigenvectors_orthonormal</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">norm2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">eigenvectors_orthonormal</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Norm vektor 1: </span><span class="si">{</span><span class="n">norm1</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Norm vektor 2: </span><span class="si">{</span><span class="n">norm2</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues:
+[3. 1.]
+
+Eigenvectors (belum normalisasi):
+[[ 0.70710678 -0.70710678]
+ [ 0.70710678  0.70710678]]
+
+Eigenvectors setelah normalisasi (orthonormal):
+[[ 0.70710678 -0.70710678]
+ [ 0.70710678  0.70710678]]
+
+Cek dot product antar vektor eigen (harus dekat 0):
+Dot product vektor 1 dan 2: 0.000000
+
+Cek norma (panjang) tiap vektor eigen (harus 1):
+Norm vektor 1: 1.000000
+Norm vektor 2: 1.000000
+</pre></div>
+</div>
+</div>
+</div>
+<section id="penjelasan-lengkap-kode-python-eigenvalue-dan-eigenvector-matriks">
+<h2>Penjelasan Lengkap Kode Python: Eigenvalue dan Eigenvector Matriks<a class="headerlink" href="#penjelasan-lengkap-kode-python-eigenvalue-dan-eigenvector-matriks" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="definisi-matriks-a">
+<h3>1. <strong>Definisi Matriks ( A )</strong><a class="headerlink" href="#definisi-matriks-a" title="Link to this heading">#</a></h3>
+<p>Matriks yang akan dianalisis adalah:</p>
+<p>[
+A = \begin{bmatrix}
+2 &amp; 1 \
+1 &amp; 2
+\end{bmatrix}
+]</p>
+<p>Matriks ini adalah matriks simetris, yang berarti ( A = A^T ).</p>
+</section>
+<hr class="docutils" />
+<section id="menghitung-eigenvalues-dan-eigenvectors-dengan-numpy">
+<h3>2. <strong>Menghitung Eigenvalues dan Eigenvectors dengan NumPy</strong><a class="headerlink" href="#menghitung-eigenvalues-dan-eigenvectors-dengan-numpy" title="Link to this heading">#</a></h3>
+<p>Kode Python menggunakan fungsi \texttt{np.linalg.eig(A)} untuk menghitung:</p>
+<ul class="simple">
+<li><p><strong>Eigenvalues</strong> ((\lambda)) dari matriks (A), yaitu skalar yang memenuhi persamaan<br />
+[
+A v = \lambda v
+]</p></li>
+<li><p><strong>Eigenvectors</strong> ((v)), yaitu vektor bukan nol yang memenuhi persamaan tersebut.</p></li>
+</ul>
+<p>Fungsi tersebut mengembalikan:</p>
+<p>[
+\text{eigenvalues}, \quad \text{eigenvectors}
+]</p>
+<p>dengan eigenvectors disusun sebagai kolom-kolom pada matriks hasil.</p>
+</section>
+<hr class="docutils" />
+<section id="verifikasi-manual-menentukan-eigenvalues">
+<h3>3. <strong>Verifikasi Manual: Menentukan Eigenvalues</strong><a class="headerlink" href="#verifikasi-manual-menentukan-eigenvalues" title="Link to this heading">#</a></h3>
+<p>Untuk memahami prosesnya secara manual, kita dapat:</p>
+<ul class="simple">
+<li><p>Bentuk matriks karakteristik ( A - \lambda I ), di mana (I) adalah matriks identitas:</p></li>
+</ul>
+<p>[
+A - \lambda I = \begin{bmatrix}
+2 - \lambda &amp; 1 \
+1 &amp; 2 - \lambda
+\end{bmatrix}
+]</p>
+<ul class="simple">
+<li><p>Hitung determinan matriks karakteristik dan setarakan dengan nol:</p></li>
+</ul>
+<p>[
+|A - \lambda I| = (2 - \lambda)(2 - \lambda) - (1 \times 1) = \lambda^2 - 4\lambda + 3 = 0
+]</p>
+<ul class="simple">
+<li><p>Selesaikan persamaan kuadrat:</p></li>
+</ul>
+<p>[
+\lambda = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+]</p>
+<p>dengan</p>
+<p>[
+a = 1, \quad b = -4, \quad c = 3
+]</p>
+<ul class="simple">
+<li><p>Hitung diskriminan:</p></li>
+</ul>
+<p>[
+\Delta = b^2 - 4ac = 16 - 12 = 4
+]</p>
+<ul class="simple">
+<li><p>Hasil solusi:</p></li>
+</ul>
+<p>[
+\lambda_1 = 3, \quad \lambda_2 = 1
+]</p>
+</section>
+<hr class="docutils" />
+<section id="menentukan-eigenvectors-untuk-setiap-eigenvalue">
+<h3>4. <strong>Menentukan Eigenvectors untuk Setiap Eigenvalue</strong><a class="headerlink" href="#menentukan-eigenvectors-untuk-setiap-eigenvalue" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Untuk (\lambda_1 = 3), substitusi ke matriks ( A - 3I ):</p></li>
+</ul>
+<p>[
+A - 3I = \begin{bmatrix}
+2-3 &amp; 1 \
+1 &amp; 2-3
+\end{bmatrix} =
+\begin{bmatrix}
+-1 &amp; 1 \
+1 &amp; -1
+\end{bmatrix}
+]</p>
+<ul class="simple">
+<li><p>Cari vektor eigen ( v_1 ) yang memenuhi:</p></li>
+</ul>
+<p>[
+(A - 3I)v_1 = 0
+]</p>
+<p>Penyelesaian menunjukkan:</p>
+<p>[
+v_1 = \begin{bmatrix} 1 \ 1 \end{bmatrix}
+]</p>
+<ul class="simple">
+<li><p>Untuk (\lambda_2 = 1), substitusi ke matriks ( A - I ):</p></li>
+</ul>
+<p>[
+A - I = \begin{bmatrix}
+2-1 &amp; 1 \
+1 &amp; 2-1
+\end{bmatrix} =
+\begin{bmatrix}
+1 &amp; 1 \
+1 &amp; 1
+\end{bmatrix}
+]</p>
+<ul class="simple">
+<li><p>Cari vektor eigen ( v_2 ) yang memenuhi:</p></li>
+</ul>
+<p>[
+(A - I)v_2 = 0
+]</p>
+<p>Penyelesaian menunjukkan:</p>
+<p>[
+v_2 = \begin{bmatrix} 1 \ -1 \end{bmatrix}
+]</p>
+</section>
+<hr class="docutils" />
+<section id="normalisasi-eigenvectors">
+<h3>5. <strong>Normalisasi Eigenvectors</strong><a class="headerlink" href="#normalisasi-eigenvectors" title="Link to this heading">#</a></h3>
+<p>Untuk membandingkan hasil dengan output NumPy, eigenvectors perlu dinormalisasi sehingga panjangnya menjadi 1. Normalisasi dilakukan dengan rumus:</p>
+<p>[
+v_{\text{normalized}} = \frac{v}{|v|}
+]</p>
+<p>dengan norma (|v|) dihitung sebagai:</p>
+<p>[
+|v| = \sqrt{v_1^2 + v_2^2}
+]</p>
+<p>Khusus untuk:</p>
+<p>[
+v_1 = \begin{bmatrix} 1 \ 1 \end{bmatrix}, \quad
+|v_1| = \sqrt{1^2 + 1^2} = \sqrt{2}
+]</p>
+<p>[
+v_2 = \begin{bmatrix} 1 \ -1 \end{bmatrix}, \quad
+|v_2| = \sqrt{1^2 + (-1)^2} = \sqrt{2}
+]</p>
+<p>Sehingga eigenvectors yang dinormalisasi menjadi:</p>
+<p>[
+v_1^{norm} = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \ 1 \end{bmatrix}, \quad
+v_2^{norm} = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \ -1 \end{bmatrix}
+]</p>
+</section>
+<hr class="docutils" />
+<section id="perbandingan-dengan-hasil-numpy">
+<h3>6. <strong>Perbandingan dengan Hasil NumPy</strong><a class="headerlink" href="#perbandingan-dengan-hasil-numpy" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Kolom pertama dari matriks \texttt{eigenvectors} NumPy sesuai dengan eigenvector untuk (\lambda_1 = 3).</p></li>
+<li><p>Kolom kedua dari matriks \texttt{eigenvectors} NumPy sesuai dengan eigenvector untuk (\lambda_2 = 1).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan">
+<h3>7. <strong>Kesimpulan</strong><a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h3>
+<p>Kode Python menggunakan \texttt{np.linalg.eig} secara efisien mengembalikan eigenvalues dan eigenvectors. Eigenvectors yang dihasilkan biasanya sudah dalam bentuk ter-normalisasi, sehingga siap dipakai untuk analisis lebih lanjut seperti dekomposisi spektral, transformasi basis, atau aplikasi lain dalam ilmu data dan fisika.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Definisi Eigenvalue, Eigenvector</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-kode-python-eigenvalue-dan-eigenvector-matriks">Penjelasan Kode Python: Eigenvalue dan Eigenvector Matriks</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-ortonormal-dan-ortogonal"><strong>Definisi Ortonormal dan Ortogonal</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-lengkap-kode-python-eigenvalue-dan-eigenvector-matriks">Penjelasan Lengkap Kode Python: Eigenvalue dan Eigenvector Matriks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matriks-a">1. <strong>Definisi Matriks ( A )</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-eigenvalues-dan-eigenvectors-dengan-numpy">2. <strong>Menghitung Eigenvalues dan Eigenvectors dengan NumPy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verifikasi-manual-menentukan-eigenvalues">3. <strong>Verifikasi Manual: Menentukan Eigenvalues</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-eigenvectors-untuk-setiap-eigenvalue">4. <strong>Menentukan Eigenvectors untuk Setiap Eigenvalue</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-eigenvectors">5. <strong>Normalisasi Eigenvectors</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perbandingan-dengan-hasil-numpy">6. <strong>Perbandingan dengan Hasil NumPy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">7. <strong>Kesimpulan</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vanka
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
