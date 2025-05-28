@@ -1,5 +1,5 @@
 ---
-title: 'Perkalian_Titik '
+title: 'Perkalian_Titik'
 ---
 
 # Perkalian Titik (Dot Product)
@@ -28,9 +28,9 @@ $$
 \mathbf{A} \cdot \mathbf{B} = \|\mathbf{A}\| \|\mathbf{B}\| \cos \theta
 $$
 
-- Jika $\theta = 90^\circ$ (tegak lurus), hasilnya nol karena $\cos 90^\circ = 0$.
+Jika $\theta = 90^\circ$ (tegak lurus), hasilnya nol karena $\cos 90^\circ = 0$.
 
-<iframe src="https://www.geogebra.org/classic/c4zfkmhf?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<iframe src="https://www.geogebra.org/classic/c4zfkmhf?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4; border-radius: 4px;" frameborder="0"></iframe>
 
 ### Contoh-Contoh
 
@@ -40,7 +40,7 @@ $$
 \mathbf{a} \cdot \mathbf{b} = (0)(2) + (0)(1) = 0 + 0 = 0
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Vektor nol $(0,0)$ akan selalu menghasilkan dot product = 0 dengan vektor lain, karena tidak memiliki panjang maupun arah.
 
 2. Vektor $\mathbf{a} = (0,0)$ dan $\mathbf{c} = (-1,2)$
@@ -49,7 +49,7 @@ $$
 \mathbf{a} \cdot \mathbf{c} = (0)(-1) + (0)(2) = 0 + 0 = 0
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Sama seperti sebelumnya, dot product tetap nol karena melibatkan vektor nol yang tidak menyumbang nilai apa pun.
 
 3. Vektor $\mathbf{b} = (2,1)$ dan $\mathbf{c} = (-1,2)$
@@ -58,10 +58,10 @@ $$
 \mathbf{b} \cdot \mathbf{c} = (2)(-1) + (1)(2) = -2 + 2 = 0
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Hasil dot product nol menunjukkan bahwa kedua vektor saling tegak lurus ($\theta = 90^\circ$), karena $\cos 90^\circ = 0$.
 
-<iframe src="https://www.geogebra.org/classic/hddxzurw?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<iframe src="https://www.geogebra.org/classic/hddxzurw?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4; border-radius: 4px;" frameborder="0"></iframe>
 
 ---
 
@@ -75,7 +75,7 @@ $$
 - $\|\mathbf{B}\|$: panjang vektor B  
 - $\theta$: sudut di antara A dan B
 
-*Interpretasi:*
+Interpretasi:
 - Jika A dan B searah ($\theta = 0^\circ$), maka:
 
 $$
@@ -104,7 +104,7 @@ $$
 \text{Proyeksi A ke B} = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{B}\|}
 $$
 
-*Hasil proyeksi* menunjukkan seberapa besar komponen vektor A yang terletak sepanjang arah B.
+Hasil proyeksi menunjukkan seberapa besar komponen vektor A yang terletak sepanjang arah B.
 
 **Contoh:**
 
@@ -138,7 +138,7 @@ $$
   $$
   Interpretasi: hasil positif berarti sudut di antara keduanya kurang dari $90^\circ$.
 
-- $\mathbf{F} = (0,0)$ dan $\mathbf{F} = (2,5)$  
+- $\mathbf{E} = (0,0)$ dan $\mathbf{F} = (2,5)$  
   Dot Product:
   $$
   E \cdot F = 0 \cdot 2 + 0 \cdot 5 = 0
@@ -175,7 +175,7 @@ $$
 \mathbf{A} \cdot \mathbf{B} = \mathbf{B} \cdot \mathbf{A}
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Urutan tidak mempengaruhi hasil dot product.
 
 2. **Sifat Distributif**
@@ -184,7 +184,7 @@ $$
 \mathbf{A} \cdot (\mathbf{B} + \mathbf{C}) = \mathbf{A} \cdot \mathbf{B} + \mathbf{A} \cdot \mathbf{C}
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Dot product bisa didistribusikan ke penjumlahan vektor.
 
 3. **Kompatibilitas dengan Skalar**
@@ -193,7 +193,7 @@ $$
 (c\mathbf{A}) \cdot \mathbf{B} = c (\mathbf{A} \cdot \mathbf{B})
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Faktor skalar dapat dikeluarkan dari dot product.
 
 4. **Hubungan dengan Panjang Vektor**
@@ -202,7 +202,7 @@ $$
 \mathbf{A} \cdot \mathbf{A} = \|\mathbf{A}\|^2
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Dot product vektor dengan dirinya sendiri sama dengan kuadrat panjangnya.
 
 5. **Ortogonalitas**
@@ -211,7 +211,7 @@ $$
 \mathbf{A} \cdot \mathbf{B} = 0 \implies \theta = 90^\circ
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Jika hasil dot product nol, kedua vektor tegak lurus.
 
 6. **Perkalian dengan Vektor Nol**
@@ -220,5 +220,5 @@ $$
 \mathbf{A} \cdot \mathbf{0} = 0
 $$
 
-*Penjelasan:*  
+Penjelasan:  
 Dot product antara vektor apa pun dengan vektor nol selalu 0.
