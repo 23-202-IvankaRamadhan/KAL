@@ -3,7 +3,7 @@ title: Tugas_Cross_Dot
 
 ---
 
- CROSS PRODUCT 
+# CROSS PRODUCT 
 ## Hasil Perkalian Silang (Cross Product)
 
 ### Pengertian
@@ -329,5 +329,5 @@ $$
 Jawaban akhir: 
 
 $$
-\text { Luas } =3 \sqrt{30}
+\text { Luas. } =3 \sqrt{30}
 $$

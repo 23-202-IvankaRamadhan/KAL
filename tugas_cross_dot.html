@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Hasil Perkalian Silang (Cross Product) &#8212; Komputasi Aljabar Linier</title>
+    <title>CROSS PRODUCT &#8212; Komputasi Aljabar Linier</title>
   
   
   
@@ -65,6 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas_cross_dot';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hasil Perkalian Silang (Cross Product)" href="materi_cross_dot.html" />
     <link rel="prev" title="Perkalian Titik (Dot Product)" href="perkalian_titik.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -186,12 +187,10 @@
 <li class="toctree-l1"><a class="reference internal" href="eigenvalue.html"><strong>Definisi Eigenvalue, Eigenvector</strong></a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="perkalian_titik.html">Perkalian Titik (Dot Product)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Hasil Perkalian Silang (Cross Product)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">CROSS PRODUCT</a></li>
 
 
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="materi_cross_dot.html">Hasil Perkalian Silang (Cross Product)</a></li>
 </ul>
 
     </div>
@@ -374,7 +373,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Hasil Perkalian Silang (Cross Product)</h1>
+    <h1>CROSS PRODUCT</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,19 +383,22 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Hasil Perkalian Silang (Cross Product)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">CROSS PRODUCT</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-perkalian-silang-cross-product">Hasil Perkalian Silang (Cross Product)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-perkalian-silang-menggunakan-determinan">Rumus Perkalian Silang Menggunakan Determinan</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-perkalian-silang-dua-vektor">Soal: Perkalian Silang Dua Vektor</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-susun-dalam-bentuk-determinan-3x3">Langkah 1: Susun dalam bentuk determinan 3x3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor">Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gabungkan-seluruh-komponen">Langkah 3: Gabungkan seluruh komponen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-perkalian-silang-menggunakan-determinan">Rumus Perkalian Silang Menggunakan Determinan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-perkalian-silang-dua-vektor">Soal: Perkalian Silang Dua Vektor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-susun-dalam-bentuk-determinan-3x3">Langkah 1: Susun dalam bentuk determinan 3x3}</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor">Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gabungkan-seluruh-komponen">Langkah 3: Gabungkan seluruh komponen</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-vektor-dari-soal-di-atas">Hasil Vektor dari soal di atas.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-vektor-dari-soal-di-atas">Hasil Vektor dari soal di atas.</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-cross-dot">Tugas Cross Dot</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1">Soal 1</a></li>
@@ -421,11 +423,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>CROSS PRODUCT</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="cross-product">
+<h1>CROSS PRODUCT<a class="headerlink" href="#cross-product" title="Link to this heading">#</a></h1>
 <section id="hasil-perkalian-silang-cross-product">
-<h1>Hasil Perkalian Silang (Cross Product)<a class="headerlink" href="#hasil-perkalian-silang-cross-product" title="Link to this heading">#</a></h1>
+<h2>Hasil Perkalian Silang (Cross Product)<a class="headerlink" href="#hasil-perkalian-silang-cross-product" title="Link to this heading">#</a></h2>
 <section id="pengertian">
-<h2>Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h2>
+<h3>Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h3>
 <p>Perkalian silang adalah operasi vektor dalam ruang tiga dimensi yang menghasilkan vektor baru yang tegak lurus terhadap kedua vektor asalnya.</p>
 <p>Jika terdapat dua vektor:
 $<span class="math notranslate nohighlight">\(
@@ -443,7 +446,7 @@ b_1 &amp; b_2 &amp; b_3 \\
 \[= (a_2 b_3 - a_3 b_2)\hat{i} - (a_1 b_3 - a_3 b_1)\hat{j} + (a_1 b_2 - a_2 b_1)\hat{k}\]</div>
 </section>
 <section id="contoh">
-<h2>Contoh<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h2>
+<h3>Contoh<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h3>
 <p>Misalnya diberikan dua vektor:
 $<span class="math notranslate nohighlight">\(
 \vec{A} = \langle 2, 3, 4 \rangle, \quad \vec{B} = \langle 5, 6, 7 \rangle
@@ -469,7 +472,7 @@ $<span class="math notranslate nohighlight">\(
 </section>
 </section>
 <section id="rumus-perkalian-silang-menggunakan-determinan">
-<h1>Rumus Perkalian Silang Menggunakan Determinan<a class="headerlink" href="#rumus-perkalian-silang-menggunakan-determinan" title="Link to this heading">#</a></h1>
+<h2>Rumus Perkalian Silang Menggunakan Determinan<a class="headerlink" href="#rumus-perkalian-silang-menggunakan-determinan" title="Link to this heading">#</a></h2>
 <p>Jika dua vektor berada dalam ruang berdimensi tiga:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -503,14 +506,14 @@ a_1 b_2 - a_2 b_1 \rangle
 \]</div>
 </section>
 <section id="soal-perkalian-silang-dua-vektor">
-<h1>Soal: Perkalian Silang Dua Vektor<a class="headerlink" href="#soal-perkalian-silang-dua-vektor" title="Link to this heading">#</a></h1>
+<h2>Soal: Perkalian Silang Dua Vektor<a class="headerlink" href="#soal-perkalian-silang-dua-vektor" title="Link to this heading">#</a></h2>
 <p>Diketahui dua vektor berikut:</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{u} = \langle 1, 1, 1 \rangle, \quad \vec{v} = \langle 2, 1, 1 \rangle
 \]</div>
 <section id="langkah-1-susun-dalam-bentuk-determinan-3x3">
-<h2>Langkah 1: Susun dalam bentuk determinan 3x3}<a class="headerlink" href="#langkah-1-susun-dalam-bentuk-determinan-3x3" title="Link to this heading">#</a></h2>
+<h3>Langkah 1: Susun dalam bentuk determinan 3x3}<a class="headerlink" href="#langkah-1-susun-dalam-bentuk-determinan-3x3" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split} 
 \vec{u} \times \vec{v} =
@@ -522,7 +525,7 @@ a_1 b_2 - a_2 b_1 \rangle
 \end{split}\]</div>
 </section>
 <section id="langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor">
-<h2>Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor<a class="headerlink" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor" title="Link to this heading">#</a></h2>
+<h3>Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor<a class="headerlink" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor" title="Link to this heading">#</a></h3>
 <p>Komponen arah <span class="math notranslate nohighlight">\(\hat{i}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\hat{i} \cdot
@@ -546,7 +549,7 @@ $<span class="math notranslate nohighlight">\(
 \end{vmatrix} = \hat{k}(1 \cdot 1 - 1 \cdot 2) = \hat{k}(1 - 2) = -\hat{k}\end{split}\]</div>
 </section>
 <section id="langkah-3-gabungkan-seluruh-komponen">
-<h2>Langkah 3: Gabungkan seluruh komponen<a class="headerlink" href="#langkah-3-gabungkan-seluruh-komponen" title="Link to this heading">#</a></h2>
+<h3>Langkah 3: Gabungkan seluruh komponen<a class="headerlink" href="#langkah-3-gabungkan-seluruh-komponen" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
 \vec{u} \times \vec{v} = 0\hat{i} + \hat{j} - \hat{k}
@@ -559,8 +562,9 @@ $<span class="math notranslate nohighlight">\(
 </section>
 </section>
 <section id="hasil-vektor-dari-soal-di-atas">
-<h1>Hasil Vektor dari soal di atas.<a class="headerlink" href="#hasil-vektor-dari-soal-di-atas" title="Link to this heading">#</a></h1>
+<h2>Hasil Vektor dari soal di atas.<a class="headerlink" href="#hasil-vektor-dari-soal-di-atas" title="Link to this heading">#</a></h2>
 <iframe src="https://www.geogebra.org/classic/uupkhszd?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
@@ -729,7 +733,7 @@ A=(5,2,-1), \quad B=(3,6,2), \quad C=(1,0,4)
 <p>Jawaban akhir:</p>
 <div class="math notranslate nohighlight">
 \[
-\text { Luas } =3 \sqrt{30}
+\text { Luas. } =3 \sqrt{30}
 \]</div>
 </section>
 </section>
@@ -774,6 +778,15 @@ A=(5,2,-1), \quad B=(3,6,2), \quad C=(1,0,4)
         <p class="prev-next-title">Perkalian Titik (Dot Product)</p>
       </div>
     </a>
+    <a class="right-next"
+       href="materi_cross_dot.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hasil Perkalian Silang (Cross Product)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -791,19 +804,22 @@ A=(5,2,-1), \quad B=(3,6,2), \quad C=(1,0,4)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Hasil Perkalian Silang (Cross Product)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">CROSS PRODUCT</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-perkalian-silang-cross-product">Hasil Perkalian Silang (Cross Product)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-perkalian-silang-menggunakan-determinan">Rumus Perkalian Silang Menggunakan Determinan</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-perkalian-silang-dua-vektor">Soal: Perkalian Silang Dua Vektor</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-susun-dalam-bentuk-determinan-3x3">Langkah 1: Susun dalam bentuk determinan 3x3}</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor">Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gabungkan-seluruh-komponen">Langkah 3: Gabungkan seluruh komponen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-perkalian-silang-menggunakan-determinan">Rumus Perkalian Silang Menggunakan Determinan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-perkalian-silang-dua-vektor">Soal: Perkalian Silang Dua Vektor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-susun-dalam-bentuk-determinan-3x3">Langkah 1: Susun dalam bentuk determinan 3x3}</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor">Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gabungkan-seluruh-komponen">Langkah 3: Gabungkan seluruh komponen</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-vektor-dari-soal-di-atas">Hasil Vektor dari soal di atas.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-vektor-dari-soal-di-atas">Hasil Vektor dari soal di atas.</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-cross-dot">Tugas Cross Dot</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1">Soal 1</a></li>
