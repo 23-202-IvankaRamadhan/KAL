@@ -136,7 +136,7 @@ $$
 \vec{u} \times \vec{v} = 0\hat{i} + \hat{j} - \hat{k}
 $$
 
-Hasil Akhir dalam Bentuk Vektor:
+Hasil Akhir dalam Bentuk Vektor.:
 
 $$
 \vec{u} \times \vec{v} = \langle 0,\ 1,\ -1 \rangle
@@ -144,7 +144,7 @@ $$
 
 
 
-## Hasil Vektor dari soal di atas
+## Hasil Vektor dari soal di atas.
 <iframe src="https://www.geogebra.org/classic/uupkhszd?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 
 
