@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Perkalian Titik (Dot Product) &#8212; Komputasi Aljabar Linier</title>
+    <title>Hasil Perkalian Silang (Cross Product) &#8212; Komputasi Aljabar Linier</title>
   
   
   
@@ -62,11 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'perkalian_titik';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materi_cross_dot';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hasil Perkalian Silang (Cross Product)" href="materi_cross_dot.html" />
-    <link rel="prev" title="Definisi Eigenvalue, Eigenvector" href="eigenvalue.html" />
+    <link rel="next" title="Tugas Cross Dot" href="tugas_cross_dot.html" />
+    <link rel="prev" title="Perkalian Titik (Dot Product)" href="perkalian_titik.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -186,8 +186,8 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="eigenvalue.html"><strong>Definisi Eigenvalue, Eigenvector</strong></a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Perkalian Titik (Dot Product)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="materi_cross_dot.html">Hasil Perkalian Silang (Cross Product)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perkalian_titik.html">Perkalian Titik (Dot Product)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Hasil Perkalian Silang (Cross Product)</a></li>
 
 
 
@@ -267,7 +267,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fperkalian_titik.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmateri_cross_dot.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +297,7 @@
       
       
       
-      <li><a href="_sources/perkalian_titik.md" target="_blank"
+      <li><a href="_sources/materi_cross_dot.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -373,7 +373,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Perkalian Titik (Dot Product)</h1>
+    <h1>Hasil Perkalian Silang (Cross Product)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -383,18 +383,21 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-dot-product">Rumus Dot Product</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berdasarkan-komponen-vektor-aljabar">1. Berdasarkan Komponen Vektor (Aljabar)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berdasarkan-sudut-antara-vektor-geometri">2. Berdasarkan Sudut Antara Vektor (Geometri)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-contoh">Contoh-Contoh</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hubungan-dengan-sudut-antara-dua-vektor">Hubungan dengan Sudut Antara Dua Vektor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proyeksi-vektor">Proyeksi Vektor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-kasus-geometris">Contoh Kasus Geometris</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-sudut-antara-dua-vektor">Menghitung Sudut Antara Dua Vektor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-perkalian-titik">Sifat-Sifat Perkalian Titik</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Hasil Perkalian Silang (Cross Product)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-perkalian-silang-menggunakan-determinan">Rumus Perkalian Silang Menggunakan Determinan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-perkalian-silang-dua-vektor">Soal: Perkalian Silang Dua Vektor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-susun-dalam-bentuk-determinan-3x3">Langkah 1: Susun dalam bentuk determinan 3x3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor">Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gabungkan-seluruh-komponen">Langkah 3: Gabungkan seluruh komponen</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-vektor-dari-soal-di-atas">Hasil Vektor dari soal di atas</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -405,227 +408,148 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="perkalian-titik-dot-product">
-<h1>Perkalian Titik (Dot Product)<a class="headerlink" href="#perkalian-titik-dot-product" title="Link to this heading">#</a></h1>
-<p><strong>Pengertian:</strong><br />
-Perkalian titik (dot product) adalah operasi matematika antara dua vektor yang menghasilkan satu bilangan skalar (real). Operasi ini digunakan untuk mengukur seberapa sejajar arah kedua vektor serta terkait erat dengan besar sudut di antara keduanya.</p>
-<section id="rumus-dot-product">
-<h2>Rumus Dot Product<a class="headerlink" href="#rumus-dot-product" title="Link to this heading">#</a></h2>
-<section id="berdasarkan-komponen-vektor-aljabar">
-<h3>1. Berdasarkan Komponen Vektor (Aljabar)<a class="headerlink" href="#berdasarkan-komponen-vektor-aljabar" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Untuk vektor 2D: <span class="math notranslate nohighlight">\(\mathbf{A} = (a_1, a_2)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{B} = (b_1, b_2)\)</span></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{B} = a_1 b_1 + a_2 b_2
-\]</div>
-<ul class="simple">
-<li><p>Untuk vektor 3D: <span class="math notranslate nohighlight">\(\mathbf{A} = (a_1, a_2, a_3)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{B} = (b_1, b_2, b_3)\)</span></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{B} = a_1 b_1 + a_2 b_2 + a_3 b_3
-\]</div>
-</section>
-<section id="berdasarkan-sudut-antara-vektor-geometri">
-<h3>2. Berdasarkan Sudut Antara Vektor (Geometri)<a class="headerlink" href="#berdasarkan-sudut-antara-vektor-geometri" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{B} = \|\mathbf{A}\| \|\mathbf{B}\| \cos \theta
-\]</div>
-<p>Jika <span class="math notranslate nohighlight">\(\theta = 90^\circ\)</span> (tegak lurus), hasilnya nol karena <span class="math notranslate nohighlight">\(\cos 90^\circ = 0\)</span>.</p>
-<iframe src="https://www.geogebra.org/classic/c4zfkmhf?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4; border-radius: 4px;" frameborder="0"></iframe>
-</section>
-<section id="contoh-contoh">
-<h3>Contoh-Contoh<a class="headerlink" href="#contoh-contoh" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Vektor <span class="math notranslate nohighlight">\(\mathbf{a} = (0,0)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{b} = (2,1)\)</span></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{a} \cdot \mathbf{b} = (0)(2) + (0)(1) = 0 + 0 = 0
-\]</div>
-<p>Penjelasan:<br />
-Vektor nol <span class="math notranslate nohighlight">\((0,0)\)</span> akan selalu menghasilkan dot product = 0 dengan vektor lain, karena tidak memiliki panjang maupun arah.</p>
-<ol class="arabic simple" start="2">
-<li><p>Vektor <span class="math notranslate nohighlight">\(\mathbf{a} = (0,0)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{c} = (-1,2)\)</span></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{a} \cdot \mathbf{c} = (0)(-1) + (0)(2) = 0 + 0 = 0
-\]</div>
-<p>Penjelasan:<br />
-Sama seperti sebelumnya, dot product tetap nol karena melibatkan vektor nol yang tidak menyumbang nilai apa pun.</p>
-<ol class="arabic simple" start="3">
-<li><p>Vektor <span class="math notranslate nohighlight">\(\mathbf{b} = (2,1)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{c} = (-1,2)\)</span></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{b} \cdot \mathbf{c} = (2)(-1) + (1)(2) = -2 + 2 = 0
-\]</div>
-<p>Penjelasan:<br />
-Hasil dot product nol menunjukkan bahwa kedua vektor saling tegak lurus (<span class="math notranslate nohighlight">\(\theta = 90^\circ\)</span>), karena <span class="math notranslate nohighlight">\(\cos 90^\circ = 0\)</span>.</p>
-<iframe src="https://www.geogebra.org/classic/hddxzurw?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4; border-radius: 4px;" frameborder="0"></iframe>
-</section>
-<hr class="docutils" />
-<section id="hubungan-dengan-sudut-antara-dua-vektor">
-<h3>Hubungan dengan Sudut Antara Dua Vektor<a class="headerlink" href="#hubungan-dengan-sudut-antara-dua-vektor" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{B} = \|\mathbf{A}\| \|\mathbf{B}\| \cos \theta
-\]</div>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\|\mathbf{A}\|\)</span>: panjang vektor A</p></li>
-<li><p><span class="math notranslate nohighlight">\(\|\mathbf{B}\|\)</span>: panjang vektor B</p></li>
-<li><p><span class="math notranslate nohighlight">\(\theta\)</span>: sudut di antara A dan B</p></li>
-</ul>
-<p>Interpretasi:</p>
-<ul class="simple">
-<li><p>Jika A dan B searah (<span class="math notranslate nohighlight">\(\theta = 0^\circ\)</span>), maka:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{B} = \|\mathbf{A}\| \|\mathbf{B}\| \quad \text{(maksimum)}
-\]</div>
-<ul class="simple">
-<li><p>Jika A dan B berlawanan arah (<span class="math notranslate nohighlight">\(\theta = 180^\circ\)</span>):</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{B} = -\|\mathbf{A}\| \|\mathbf{B}\| \quad \text{(minimum)}
-\]</div>
-<ul class="simple">
-<li><p>Jika A dan B tegak lurus (<span class="math notranslate nohighlight">\(\theta = 90^\circ\)</span>):</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{B} = 0 \quad \text{(karena } \cos 90^\circ = 0)
-\]</div>
-</section>
-<hr class="docutils" />
-<section id="proyeksi-vektor">
-<h3>Proyeksi Vektor<a class="headerlink" href="#proyeksi-vektor" title="Link to this heading">#</a></h3>
-<p>Dot product juga dapat digunakan untuk mencari proyeksi vektor <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> ke arah <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\text{Proyeksi A ke B} = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{B}\|}
-\]</div>
-<p>Hasil proyeksi menunjukkan seberapa besar komponen vektor A yang terletak sepanjang arah B.</p>
-<p><strong>Contoh:</strong></p>
-<p>Misal <span class="math notranslate nohighlight">\(\mathbf{A} = (3,4)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{B} = (1,0)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-A \cdot B = 3 \cdot 1 + 4 \cdot 0 = 3
-\]</div>
-<p>Proyeksi A ke B:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{3}{\sqrt{1^2 + 0^2}} = 3
-\]</div>
-</section>
-<hr class="docutils" />
-<section id="contoh-kasus-geometris">
-<h3>Contoh Kasus Geometris<a class="headerlink" href="#contoh-kasus-geometris" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\mathbf{A} = (2,1)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{B} = (-1,2)\)</span><br />
-Dot Product:
+  <p>CROSS PRODUCT</p>
+<section id="hasil-perkalian-silang-cross-product">
+<h1>Hasil Perkalian Silang (Cross Product)<a class="headerlink" href="#hasil-perkalian-silang-cross-product" title="Link to this heading">#</a></h1>
+<section id="pengertian">
+<h2>Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h2>
+<p>Perkalian silang adalah operasi vektor dalam ruang tiga dimensi yang menghasilkan vektor baru yang tegak lurus terhadap kedua vektor asalnya.</p>
+<p>Jika terdapat dua vektor:
 $<span class="math notranslate nohighlight">\(
-A \cdot B = (2)(-1) + (1)(2) = -2 + 2 = 0
-\)</span>$
-Interpretasi: kedua vektor tegak lurus.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{C} = (3,4)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{D} = (3,0)\)</span><br />
-Dot Product:
-$<span class="math notranslate nohighlight">\(
-C \cdot D = (3)(3) + (4)(0) = 9 + 0 = 9
-\)</span><span class="math notranslate nohighlight">\(
-Interpretasi: hasil positif berarti sudut di antara keduanya kurang dari \)</span>90^\circ$.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{E} = (0,0)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{F} = (2,5)\)</span><br />
-Dot Product:
-$<span class="math notranslate nohighlight">\(
-E \cdot F = 0 \cdot 2 + 0 \cdot 5 = 0
-\)</span>$
-Interpretasi: vektor nol tidak menghasilkan arah, sehingga dot product-nya selalu 0.</p></li>
-</ul>
+\vec{A} = \langle a_1, a_2, a_3 \rangle \quad \text{dan} \quad \vec{B} = \langle b_1, b_2, b_3 \rangle
+\)</span>$</p>
+<p>Maka hasil dari <span class="math notranslate nohighlight">\(\vec{A} \times \vec{B}\)</span> diperoleh dari:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{A} \times \vec{B} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+a_1 &amp; a_2 &amp; a_3 \\
+b_1 &amp; b_2 &amp; b_3 \\
+\end{vmatrix} \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[= (a_2 b_3 - a_3 b_2)\hat{i} - (a_1 b_3 - a_3 b_1)\hat{j} + (a_1 b_2 - a_2 b_1)\hat{k}\]</div>
 </section>
-<hr class="docutils" />
-<section id="menghitung-sudut-antara-dua-vektor">
-<h3>Menghitung Sudut Antara Dua Vektor<a class="headerlink" href="#menghitung-sudut-antara-dua-vektor" title="Link to this heading">#</a></h3>
-<p>Untuk menghitung <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
+<section id="contoh">
+<h2>Contoh<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h2>
+<p>Misalnya diberikan dua vektor:
+$<span class="math notranslate nohighlight">\(
+\vec{A} = \langle 2, 3, 4 \rangle, \quad \vec{B} = \langle 5, 6, 7 \rangle
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{A} \times \vec{B} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 \\
+\end{vmatrix} \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[= (3 \cdot 7 - 4 \cdot 6)\hat{i} - (2 \cdot 7 - 4 \cdot 5)\hat{j} + (2 \cdot 6 - 3 \cdot 5)\hat{k}\]</div>
+<div class="math notranslate nohighlight">
+\[ = (21 - 24)\hat{i} - (14 - 20)\hat{j} + (12 - 15)\hat{k}\]</div>
+<div class="math notranslate nohighlight">
+\[= -3\hat{i} + 6\hat{j} - 3\hat{k}\]</div>
 <div class="math notranslate nohighlight">
 \[
-\cos \theta = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \|\mathbf{B}\|}
+\vec{A} \times \vec{B} = \langle -3, 6, -3 \rangle
 \]</div>
-<p><strong>Contoh:</strong><br />
-<span class="math notranslate nohighlight">\(\mathbf{A} = (1,0)\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{B} = (1, \sqrt{3})\)</span>:</p>
+</section>
+</section>
+<section id="rumus-perkalian-silang-menggunakan-determinan">
+<h1>Rumus Perkalian Silang Menggunakan Determinan<a class="headerlink" href="#rumus-perkalian-silang-menggunakan-determinan" title="Link to this heading">#</a></h1>
+<p>Jika dua vektor berada dalam ruang berdimensi tiga:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{A} = \langle a_1, a_2, a_3 \rangle, \quad
+\vec{B} = \langle b_1, b_2, b_3 \rangle
+\]</div>
+<p>Maka untuk menentukan <span class="math notranslate nohighlight">\(\vec{A} \times \vec{B}\)</span>, digunakan determinan sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{A} \times \vec{B} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+a_1 &amp; a_2 &amp; a_3 \\
+b_1 &amp; b_2 &amp; b_3 \\
+\end{vmatrix}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(vec{A} \times \vec{B} = (a_2 b_3 - a_3 b_2)\hat{i}\)</span></p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(A \cdot B = 1 \cdot 1 + 0 \cdot \sqrt{3} = 1\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\|A\| = 1, \|B\| = \sqrt{1^2 + (\sqrt{3})^2} = 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((a_1 b_3 - a_3 b_1)\hat{j}\)</span></p></li>
 </ul>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((a_1 b_2 - a_2 b_1)\hat{k}\)</span></p></li>
+</ul>
+<p>Atau bisa juga dituliskan dalam bentuk vektor:</p>
 <div class="math notranslate nohighlight">
 \[
-\cos \theta = \frac{1}{1 \cdot 2} = 0.5 \implies \theta = 60^\circ
+\vec{A} \times \vec{B} = 
+\langle a_2 b_3 - a_3 b_2,\ 
+-(a_1 b_3 - a_3 b_1),\ 
+a_1 b_2 - a_2 b_1 \rangle
 \]</div>
 </section>
-<hr class="docutils" />
-<section id="sifat-sifat-perkalian-titik">
-<h3>Sifat-Sifat Perkalian Titik<a class="headerlink" href="#sifat-sifat-perkalian-titik" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p><strong>Sifat Komutatif</strong></p></li>
-</ol>
+<section id="soal-perkalian-silang-dua-vektor">
+<h1>Soal: Perkalian Silang Dua Vektor<a class="headerlink" href="#soal-perkalian-silang-dua-vektor" title="Link to this heading">#</a></h1>
+<p>Diketahui dua vektor berikut:</p>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{A} \cdot \mathbf{B} = \mathbf{B} \cdot \mathbf{A}
+\vec{u} = \langle 1, 1, 1 \rangle, \quad \vec{v} = \langle 2, 1, 1 \rangle
 \]</div>
-<p>Penjelasan:<br />
-Urutan tidak mempengaruhi hasil dot product.</p>
-<ol class="arabic simple" start="2">
-<li><p><strong>Sifat Distributif</strong></p></li>
-</ol>
+<section id="langkah-1-susun-dalam-bentuk-determinan-3x3">
+<h2>Langkah 1: Susun dalam bentuk determinan 3x3}<a class="headerlink" href="#langkah-1-susun-dalam-bentuk-determinan-3x3" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+1 &amp; 1 &amp; 1 \\
+2 &amp; 1 &amp; 1 \\
+\end{vmatrix}
+\end{split}\]</div>
+</section>
+<section id="langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor">
+<h2>Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor<a class="headerlink" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor" title="Link to this heading">#</a></h2>
+<p>Komponen arah <span class="math notranslate nohighlight">\(\hat{i}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{i} \cdot
+\begin{vmatrix}
+1 &amp; 1 \\
+1 &amp; 1 \\
+\end{vmatrix} = \hat{i}(1 \cdot 1 - 1 \cdot 1) = \hat{i}(1 - 1) = 0\hat{i}\end{split}\]</div>
+<p>Komponen arah <span class="math notranslate nohighlight">\(\hat{j}\)</span>:
+$<span class="math notranslate nohighlight">\(
+\hat{j} \cdot
+\begin{vmatrix}
+1 &amp; 1 \\
+2 &amp; 1 \\
+\end{vmatrix} = -\hat{j}(1 \cdot 1 - 1 \cdot 2) = -\hat{j}(1 - 2) = -\hat{j}(-1) = \hat{j}\)</span>$</p>
+<p>Komponen arah <span class="math notranslate nohighlight">\(\hat{k}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{k} \cdot
+\begin{vmatrix}
+1 &amp; 1 \\
+2 &amp; 1 \\
+\end{vmatrix} = \hat{k}(1 \cdot 1 - 1 \cdot 2) = \hat{k}(1 - 2) = -\hat{k}\end{split}\]</div>
+</section>
+<section id="langkah-3-gabungkan-seluruh-komponen">
+<h2>Langkah 3: Gabungkan seluruh komponen<a class="headerlink" href="#langkah-3-gabungkan-seluruh-komponen" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{A} \cdot (\mathbf{B} + \mathbf{C}) = \mathbf{A} \cdot \mathbf{B} + \mathbf{A} \cdot \mathbf{C}
+\vec{u} \times \vec{v} = 0\hat{i} + \hat{j} - \hat{k}
 \]</div>
-<p>Penjelasan:<br />
-Dot product bisa didistribusikan ke penjumlahan vektor.</p>
-<ol class="arabic simple" start="3">
-<li><p><strong>Kompatibilitas dengan Skalar</strong></p></li>
-</ol>
+<p>Hasil Akhir dalam Bentuk Vektor:</p>
 <div class="math notranslate nohighlight">
 \[
-(c\mathbf{A}) \cdot \mathbf{B} = c (\mathbf{A} \cdot \mathbf{B})
+\vec{u} \times \vec{v} = \langle 0,\ 1,\ -1 \rangle
 \]</div>
-<p>Penjelasan:<br />
-Faktor skalar dapat dikeluarkan dari dot product.</p>
-<ol class="arabic simple" start="4">
-<li><p><strong>Hubungan dengan Panjang Vektor</strong></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{A} = \|\mathbf{A}\|^2
-\]</div>
-<p>Penjelasan:<br />
-Dot product vektor dengan dirinya sendiri sama dengan kuadrat panjangnya.</p>
-<ol class="arabic simple" start="5">
-<li><p><strong>Ortogonalitas</strong></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{B} = 0 \implies \theta = 90^\circ
-\]</div>
-<p>Penjelasan:<br />
-Jika hasil dot product nol, kedua vektor tegak lurus.</p>
-<ol class="arabic simple" start="6">
-<li><p><strong>Perkalian dengan Vektor Nol</strong></p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A} \cdot \mathbf{0} = 0
-\]</div>
-<p>Penjelasan:<br />
-Dot product antara vektor apa pun dengan vektor nol selalu 0.</p>
 </section>
 </section>
+<section id="hasil-vektor-dari-soal-di-atas">
+<h1>Hasil Vektor dari soal di atas<a class="headerlink" href="#hasil-vektor-dari-soal-di-atas" title="Link to this heading">#</a></h1>
+<iframe src="https://www.geogebra.org/classic/uupkhszd?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -659,20 +583,20 @@ Dot product antara vektor apa pun dengan vektor nol selalu 0.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="eigenvalue.html"
+       href="perkalian_titik.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>Definisi Eigenvalue, Eigenvector</strong></p>
+        <p class="prev-next-title">Perkalian Titik (Dot Product)</p>
       </div>
     </a>
     <a class="right-next"
-       href="materi_cross_dot.html"
+       href="tugas_cross_dot.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hasil Perkalian Silang (Cross Product)</p>
+        <p class="prev-next-title">Tugas Cross Dot</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -693,18 +617,21 @@ Dot product antara vektor apa pun dengan vektor nol selalu 0.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-dot-product">Rumus Dot Product</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berdasarkan-komponen-vektor-aljabar">1. Berdasarkan Komponen Vektor (Aljabar)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berdasarkan-sudut-antara-vektor-geometri">2. Berdasarkan Sudut Antara Vektor (Geometri)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-contoh">Contoh-Contoh</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hubungan-dengan-sudut-antara-dua-vektor">Hubungan dengan Sudut Antara Dua Vektor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proyeksi-vektor">Proyeksi Vektor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-kasus-geometris">Contoh Kasus Geometris</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-sudut-antara-dua-vektor">Menghitung Sudut Antara Dua Vektor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-perkalian-titik">Sifat-Sifat Perkalian Titik</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Hasil Perkalian Silang (Cross Product)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-perkalian-silang-menggunakan-determinan">Rumus Perkalian Silang Menggunakan Determinan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-perkalian-silang-dua-vektor">Soal: Perkalian Silang Dua Vektor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-susun-dalam-bentuk-determinan-3x3">Langkah 1: Susun dalam bentuk determinan 3x3}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-setiap-komponen-dengan-ekspansi-kofaktor">Langkah 2: Hitung setiap komponen dengan ekspansi kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-gabungkan-seluruh-komponen">Langkah 3: Gabungkan seluruh komponen</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-vektor-dari-soal-di-atas">Hasil Vektor dari soal di atas</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
