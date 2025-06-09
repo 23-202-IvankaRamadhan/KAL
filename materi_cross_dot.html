@@ -65,7 +65,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'materi_cross_dot';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas Cross Dot" href="tugas_cross_dot.html" />
     <link rel="prev" title="Perkalian Titik (Dot Product)" href="perkalian_titik.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -188,6 +187,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="perkalian_titik.html">Perkalian Titik (Dot Product)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Hasil Perkalian Silang (Cross Product)</a></li>
+
 
 
 
@@ -396,6 +396,17 @@
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-vektor-dari-soal-di-atas">Hasil Vektor dari soal di atas.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-cross-dot">Tugas Cross Dot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1">Soal 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang-dari-vektor">1. Luas jajaran genjang dari vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. Luas jajaran genjang dari vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-segitiga-dengan-titik-titik-sudut">3. Luas segitiga dengan titik-titik sudut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4. Luas segitiga dengan titik-titik sudut</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -548,8 +559,175 @@ $<span class="math notranslate nohighlight">\(
 <section id="hasil-vektor-dari-soal-di-atas">
 <h1>Hasil Vektor dari soal di atas.<a class="headerlink" href="#hasil-vektor-dari-soal-di-atas" title="Link to this heading">#</a></h1>
 <iframe src="https://www.geogebra.org/classic/uupkhszd?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-<div class="toctree-wrapper compound">
-</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tugas-cross-dot">
+<h1>Tugas Cross Dot<a class="headerlink" href="#tugas-cross-dot" title="Link to this heading">#</a></h1>
+<section id="soal-1">
+<h2>Soal 1<a class="headerlink" href="#soal-1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Tentukan luas jajaran genjang yang ditentukan oleh vektor <span class="math notranslate nohighlight">\(\vec{u}=\left[\begin{array}{l}1 \\ 2\end{array}\right]\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}=\left[\begin{array}{l}2 \\ 1\end{array}\right]\)</span>.</p></li>
+<li><p>Tentukan luas jajaran genjang yang ditentukan oleh vektor <span class="math notranslate nohighlight">\(\vec{u}=\left[\begin{array}{l}2 \\ 0\end{array}\right]\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}=\left[\begin{array}{l}0 \\ 3\end{array}\right]\)</span>.</p></li>
+<li><p>Tentukan luas segitiga dengan titik-titik sudut <span class="math notranslate nohighlight">\((0,0,0),(1,3,-1)\)</span>, dan <span class="math notranslate nohighlight">\((2,1,1)\)</span>.</p></li>
+<li><p>Tentukan luas segitiga dengan titik-titik sudut <span class="math notranslate nohighlight">\((5,2,-1),(3,6,2)\)</span>, dan <span class="math notranslate nohighlight">\((1,0,4)\)</span>.</p></li>
+</ol>
+</section>
+<section id="jawaban">
+<h2>Jawaban<a class="headerlink" href="#jawaban" title="Link to this heading">#</a></h2>
+<section id="luas-jajaran-genjang-dari-vektor">
+<h3>1. Luas jajaran genjang dari vektor<a class="headerlink" href="#luas-jajaran-genjang-dari-vektor" title="Link to this heading">#</a></h3>
+<p>Kita diberikan dua vektor di ruang dua dimensi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u}=\left[\begin{array}{l}
+1 \\
+2
+\end{array}\right], \quad \vec{v}=\left[\begin{array}{l}
+2 \\
+1
+\end{array}\right]
+\end{split}\]</div>
+<p>Untuk vektor 2D, luas jajaran genjang dapat dihitung menggunakan nilai absolut dari determinan matriks 2x2 yang terbentuk dari vektor-vektor tersebut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text { Luas }=|\vec{u} \times \vec{v}|=\left|\begin{array}{ll}
+1 &amp; 2 \\
+2 &amp; 1
+\end{array}\right|=|(1)(1)-(2)(2)|=|1-4|=3
+\end{split}\]</div>
+<p>Jadi, luas jajaran genjang yang dibentuk oleh vektor <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span> adalah <em>3 satuan luas</em>.</p>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h3>2. Luas jajaran genjang dari vektor<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Diberikan vektor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u}=\left[\begin{array}{l}
+2 \\
+0
+\end{array}\right], \quad \vec{v}=\left[\begin{array}{l}
+0 \\
+3
+\end{array}\right]
+\end{split}\]</div>
+<p>Seperti sebelumnya, luas jajaran genjang ditentukan oleh determinan dari matriks yang terdiri dari kedua vektor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text { Luas }=\left|\begin{array}{ll}
+2 &amp; 0 \\
+0 &amp; 3
+\end{array}\right|=|(2)(3)-(0)(0)|=|6|=6
+\end{split}\]</div>
+<p>Jadi, luas jajaran genjang yang dibentuk oleh vektor <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span> adalah <em>6 satuan luas</em>.</p>
+</section>
+<hr class="docutils" />
+<section id="luas-segitiga-dengan-titik-titik-sudut">
+<h3>3. Luas segitiga dengan titik-titik sudut<a class="headerlink" href="#luas-segitiga-dengan-titik-titik-sudut" title="Link to this heading">#</a></h3>
+<p>Diberikan titik-titik sudut segitiga:</p>
+<div class="math notranslate nohighlight">
+\[
+A=(0,0,0), \quad B=(1,3,-1), \quad C=(2,1,1)
+\]</div>
+<p>Langkah pertama adalah menghitung vektor yang menghubungkan titik-titik ini:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overrightarrow{A B}=B-A=\left[\begin{array}{c}
+1 \\
+3 \\
+-1
+\end{array}\right], \quad \overrightarrow{A C}=C-A=\left[\begin{array}{l}
+2 \\
+1 \\
+1
+\end{array}\right]
+\end{split}\]</div>
+<p>Selanjutnya, hitung perkalian silang antara vektor <span class="math notranslate nohighlight">\(\overrightarrow{AB}\)</span> dan <span class="math notranslate nohighlight">\(\overrightarrow{AC}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\overrightarrow{A B} \times \overrightarrow{A C}=\left|\begin{array}{ccc}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+1 &amp; 3 &amp; -1 \\
+2 &amp; 1 &amp; 1
+\end{array}\right|=\mathbf{i}(3 \cdot 1-(-1) \cdot 1)-\mathbf{j}(1 \cdot 1-(-1) \cdot 2)+\mathbf{k}(1 \cdot 1-3 \cdot 2) \\
+=\mathbf{i}(3+1)-\mathbf{j}(1+2)+\mathbf{k}(1-6)=\left[\begin{array}{c}
+4 \\
+-3 \\
+-5
+\end{array}\right]
+\end{gathered}
+\end{split}\]</div>
+<p>Panjang vektor hasil cross product:</p>
+<div class="math notranslate nohighlight">
+\[
+|\overrightarrow{A B} \times \overrightarrow{A C}|=\sqrt{4^2+(-3)^2+(-5)^2}=\sqrt{16+9+25}=\sqrt{50}
+\]</div>
+<p>Karena luas segitiga diperoleh dari <em>setengah dari panjang vektor hasil perkalian silang</em>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+\text { Luas }=\frac{1}{2} \sqrt{50}=\frac{1}{2} \cdot 5 \sqrt{2}=\frac{5 \sqrt{2}}{2}
+\]</div>
+<p>Jadi, luas segitiga adalah <em><span class="math notranslate nohighlight">\(\frac{5 \sqrt{2}}{2}\)</span> satuan luas</em>.</p>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h3>4. Luas segitiga dengan titik-titik sudut<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Diberikan titik-titik sudut:</p>
+<div class="math notranslate nohighlight">
+\[
+A=(5,2,-1), \quad B=(3,6,2), \quad C=(1,0,4)
+\]</div>
+<p>Hitung vektor yang menghubungkan titik-titik tersebut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overrightarrow{A B}=B-A=\left[\begin{array}{c}
+-2 \\
+4 \\
+3
+\end{array}\right], \quad \overrightarrow{A C}=C-A=\left[\begin{array}{c}
+-4 \\
+-2 \\
+5
+\end{array}\right]
+\end{split}\]</div>
+<p>Lakukan perkalian silang:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\overrightarrow{A B} \times \overrightarrow{A C}=\left|\begin{array}{ccc}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+-2 &amp; 4 &amp; 3 \\
+-4 &amp; -2 &amp; 5
+\end{array}\right|=\mathbf{i}(4 \cdot 5-3 \cdot(-2))-\mathbf{j}(-2 \cdot 5-3 \cdot(-4))+\mathbf{k}(-2 \cdot(-2)-4 \cdot(-4)) \\
+=\mathbf{i}(20+6)-\mathbf{j}(-10+12)+\mathbf{k}(4+16)=\left[\begin{array}{c}
+26 \\
+-2 \\
+20
+\end{array}\right]
+\end{gathered}
+\end{split}\]</div>
+<p>Panjang vektor:</p>
+<div class="math notranslate nohighlight">
+\[
+|\overrightarrow{A B} \times \overrightarrow{A C}|=\sqrt{26^2+(-2)^2+20^2}=\sqrt{676+4+400}=\sqrt{1080}
+\]</div>
+<p>Luas segitiga adalah:</p>
+<div class="math notranslate nohighlight">
+\[
+\text { Luas }=\frac{1}{2} \sqrt{1080}=\frac{\sqrt{1080}}{2}
+\]</div>
+<p>Sederhanakan bentuk akar:</p>
+<div class="math notranslate nohighlight">
+\[
+\sqrt{1080}=\sqrt{36 \cdot 30}=6 \sqrt{30}
+\]</div>
+<p>Jawaban akhir:</p>
+<div class="math notranslate nohighlight">
+\[
+\text { Luas } =3 \sqrt{30}
+\]</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -591,15 +769,6 @@ $<span class="math notranslate nohighlight">\(
         <p class="prev-next-title">Perkalian Titik (Dot Product)</p>
       </div>
     </a>
-    <a class="right-next"
-       href="tugas_cross_dot.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas Cross Dot</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -630,6 +799,17 @@ $<span class="math notranslate nohighlight">\(
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-vektor-dari-soal-di-atas">Hasil Vektor dari soal di atas.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-cross-dot">Tugas Cross Dot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1">Soal 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang-dari-vektor">1. Luas jajaran genjang dari vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. Luas jajaran genjang dari vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-segitiga-dengan-titik-titik-sudut">3. Luas segitiga dengan titik-titik sudut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4. Luas segitiga dengan titik-titik sudut</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
