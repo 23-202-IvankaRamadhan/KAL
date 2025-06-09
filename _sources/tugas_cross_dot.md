@@ -329,5 +329,5 @@ $$
 Jawaban akhir: 
 
 $$
-\text { Luas. } =3 \sqrt{30}
+\text { Luas } =3 \sqrt{30}
 $$
