@@ -221,4 +221,4 @@ $$
 $$
 
 Penjelasan:  
-Dot product antara vektor apa pun dengan vektor nol selalu 0.
+Dot product antara vektor apa pun dengan vektor nol selalu 0
