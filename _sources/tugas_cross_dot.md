@@ -150,7 +150,7 @@ $$
 
 
 
-
+#
 # Tugas Cross Dot
 ## Soal 1
 1. Tentukan luas jajaran genjang yang ditentukan oleh vektor $\vec{u}=\left[\begin{array}{l}1 \\ 2\end{array}\right]$ dan $\vec{v}=\left[\begin{array}{l}2 \\ 1\end{array}\right]$.
